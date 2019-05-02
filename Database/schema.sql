@@ -22,6 +22,8 @@ CREATE TABLE events
 (
     eventid int NOT NULL AUTO_INCREMENT,
     title varchar(180) NOT NULL,
+    date varchar(25) not null,
+    time varchar(25) not null,
     link varchar(255),
     address varchar(255) NOT NULL,
     dog BOOLEAN default false,
@@ -30,6 +32,7 @@ CREATE TABLE events
     reptile BOOLEAN default false,
     fish BOOLEAN default false,
     multi BOOLEAN default false,
+    hostname varchar(255),
     PRIMARY KEY (eventid)
 
 );

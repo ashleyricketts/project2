@@ -1,0 +1,6 @@
+INSERT INTO users (username, userphoto, email, dog, cat, bird, reptile, fish, multi, petnames) VALUES('TheCatLady', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFjM_jrux0vsHSmqOr_LSB8sK8GZRaxoCOmneMxUu-fh8N4PZc', 'thecatlady@aol.com', false, true, false, false, false, false, 'FluffyMuffins Bruno LadyCrumpetts');
+INSERT INTO users (username, userphoto, email, dog, cat, bird, reptile, fish, multi, petnames) VALUES('TheDogDude', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyzkyovR80FZgW2_ZFv5yl2ZMH287YijSj7KOkhfXhitGuSbgOCg', 'thedogdude@aol.com', true, false, false, false, false, false, 'Flash Duke Ace');
+INSERT INTO users (username, userphoto, email, dog, cat, bird, reptile, fish, multi, petnames) VALUES('ReptileLovinAussie', 'https://images2.minutemediacdn.com/image/upload/c_crop,h_842,w_1500,x_0,y_52/f_auto,q_auto,w_1100/v1554701032/shape/mentalfloss/gettyimages-1129399.jpg', 'stevesthename@aol.com', false, false, false, true, false, false, 'Kipper Nipper Ripper');
+
+
+INSERT INTO events (title, date, time, link, address, dog, cat, bird, reptile, fish, multi, hostname) VALUES('Tea w/ FluufyMuffins', '05/30/19', '02:00pm' 'https://www.mewsickittycafe.com/', '2519 Nolensville Pike, Nashville, TN',false, true, false, false, false, false,'TheCatLady')
