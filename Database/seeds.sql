@@ -3,4 +3,5 @@ INSERT INTO users (username, userphoto, email, dog, cat, bird, reptile, fish, mu
 INSERT INTO users (username, userphoto, email, dog, cat, bird, reptile, fish, multi, petnames) VALUES('ReptileLovinAussie', 'https://images2.minutemediacdn.com/image/upload/c_crop,h_842,w_1500,x_0,y_52/f_auto,q_auto,w_1100/v1554701032/shape/mentalfloss/gettyimages-1129399.jpg', 'stevesthename@aol.com', false, false, false, true, false, false, 'Kipper Nipper Ripper');
 
 
-INSERT INTO events (title, date, time, link, address, dog, cat, bird, reptile, fish, multi, hostname) VALUES('Tea w/ FluufyMuffins', '05/30/19', '02:00pm' 'https://www.mewsickittycafe.com/', '2519 Nolensville Pike, Nashville, TN',false, true, false, false, false, false,'TheCatLady')
+INSERT INTO events (title, date, time, link, address, dog, cat, bird, reptile, fish, multi, hostname) VALUES('Tea w/ FluufyMuffins', '05/30/19', '02:00pm', 'https://www.mewsickittycafe.com/', '2519 Nolensville Pike, Nashville, TN',false, true, false, false, false, false,'TheCatLady')
+INSERT INTO events (title, date, time, link, address, dog, cat, bird, reptile, fish, multi, hostname) VALUES('B-day party for Duke', '06/01/19', '03:00pm', 'https://www.bringfido.com/attraction/3483', '401 20th Ave S, Nashville, TN', true, false, false, false, false, false,'TheDogDude')

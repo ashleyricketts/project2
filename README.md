@@ -1,16 +1,35 @@
 # project2
 
-W/ Pet Party we can:
+## _W/ Pet Party we have:_
 
-join by Creating New Member(credentials being: username and email)
+_Basic front end functions:_
 
-Once you have a profile you can:
+Create NewUser from Create Member Div add to UserTable w/ *addMe BTN*
 
-Sign in w/ Credentials, then:
+Sign In w/ UserName and EmailAddress w/ *signIn BTN*
 
-Update or Delete your Profile
+Populate User Profile Modal from UserTable after Sign In [auto],
 
-Create and New Event, Update, or Delete any events you have created
+Update UserTable from *update BTN* on User Profile Modal,
 
-Select events to go to, which will auto adding them to “my events”
+Create NewEvents from Create Event Div add to EventsTable w/ *createEvent BTN*
 
+Update/Delete created *updateEvent BTN* events (only availble to EventHost),
+
+Populate Events Div from Events Table [auto],
+
+Update UserTable with Selected Events by ID with *going BTN* (Table Boolean),
+
+Populate My Events Div with Selected Events by ID to User by ID [auto],
+
+Update My Events *notGoing BTN* (Table Boolean)
+
+_Optional features in Footer:_
+
+Helpful Links [BringFido, Habit, Parks&Rec, ETC],
+
+OpenWeather API link,
+
+Google Calendar Link,
+
+GPS Link
