@@ -8,12 +8,8 @@ CREATE TABLE users
     username varchar(30) NOT NULL,
     userphoto varchar(255),
     email varchar(30) NOT NULL,
-    dog BOOLEAN default false,
-    cat BOOLEAN default false,
-    bird BOOLEAN default false,
-    reptile BOOLEAN default false,
-    fish BOOLEAN default false,
-    multi BOOLEAN default false, 
+    -- pet column will collect: dog, cat, bird, fish, reptile from dropdown or checklist
+    pet varchar(30) NOT NULL, 
     petNames varchar(255),
     PRIMARY KEY (userid)
 );
@@ -26,12 +22,8 @@ CREATE TABLE events
     time varchar(25) not null,
     link varchar(255),
     address varchar(255) NOT NULL,
-    dog BOOLEAN default false,
-    cat BOOLEAN default false,
-    bird BOOLEAN default false,
-    reptile BOOLEAN default false,
-    fish BOOLEAN default false,
-    multi BOOLEAN default false,
+    -- pet column will collect: dog, cat, bird, fish, reptile from dropdown or checklist
+    pet varchar(30) NOT NULL,
     hostname varchar(255),
     PRIMARY KEY (eventid)
 
