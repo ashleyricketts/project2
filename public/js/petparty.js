@@ -18,8 +18,16 @@ $("id").on("click", function (event) {
     user_photto: $().val().trim(),
     email: $().val().trim(),
   };
-  $.post("api/post", newUser, function (data) {
-    console.log("new user created!" + data);
-  });
+
+// post request to create a new user. 
+
+$.ajax("api/users", {
+  type: "POST",
+  data: newUser
+}).then(function(data){
+  console.log("New user created: " + data);
+  // reload the page 
+  location.reload();
+});
 });
 
