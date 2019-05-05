@@ -24,8 +24,6 @@
       crossorigin="anonymous"
     />
 
-    <link rel="stylesheet" type="text/css" href="styles.css" />
-
     <script
       src="https://code.jquery.com/jquery-3.4.0.min.js"
       integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
@@ -44,11 +42,39 @@
       crossorigin="anonymous"
     ></script>
 
-    <script type="text/javascript" src="/js/index.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
 
     <title>PET PARTY</title>
 
-    <style></style>
+    <style>
+
+  body {
+    min-height: 100vh;
+    background: url("./img/grass.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Wendy One", sans-serif;
+  }
+
+  #mainNav {
+    background: rgba(76, 175, 80, 0.9); /* Green background with 30% opacity */
+  }
+
+  .jumbotron {
+    background: none;
+  }
+
+  .card-deck {
+    width: 90%;
+    max-width: 1240px;
+    margin: 0 auto;
+    display: flex;
+  }
+
+  #test {
+    display: -moz-inline-grid;
+  }
+    </style>
   </head>
 
   <body>
@@ -114,7 +140,7 @@
     <div class="container-fluid" id="home">
       <div class="jumbotron">
         <img
-          src="logo.jpg"
+          src="img/logo.jpg"
           alt="responsive logo"
           style="height:auto; width:100%;"
           class="img-fluid"
@@ -151,9 +177,9 @@
       <br />
       <h2>New Events</h2>
       <hr class="my-4" />
-      <div class="card-columns">
-        <div class="card" style="max-width: 18rem;">
-          <img src="dogparks1.jpg" class="card-img-top" alt="..." />
+      <div class="card-columns" id="eventArea">
+        <div class="card eventCard" style="max-width: 18rem;">
+          <img src="img/dogparks1.jpg" class="card-img-top" alt="..." />
           <div class="card-body">
             <h5 class="card-title">Event Name</h5>
             <h6>Date</h6>
@@ -169,8 +195,8 @@
             </div>
           </div>
         </div>
-        <div class="card" style="max-width: 18rem;">
-          <img src="dogparks2.jpg" class="card-img-top" alt="..." />
+        <div class="card eventCard" style="max-width: 18rem;">
+          <img src="img/dogparks2.jpg" class="card-img-top" alt="..." />
           <div class="card-body">
             <h5 class="card-title">Event Name</h5>
             <h6>Date</h6>
@@ -186,8 +212,8 @@
             </div>
           </div>
         </div>
-        <div class="card" style="max-width: 18rem;">
-          <img src="dogparksall.jpg" class="card-img-top" alt="..." />
+        <div class="card eventCard" style="max-width: 18rem;">
+          <img src="img/dogparksall.jpg" class="card-img-top" alt="..." />
           <div class="card-body">
             <h5 class="card-title">Event Name</h5>
             <h6>Date</h6>
@@ -203,8 +229,8 @@
             </div>
           </div>
         </div>
-        <div class="card" style="max-width: 18rem;">
-          <img src="catparty.jpg" class="card-img-top" alt="..." />
+        <div class="card eventCard" style="max-width: 18rem;">
+          <img src="img/catparty.jpg" class="card-img-top" alt="..." />
           <div class="card-body">
             <h5 class="card-title">Event Name</h5>
             <h6>Date</h6>
@@ -220,8 +246,8 @@
             </div>
           </div>
         </div>
-        <div class="card" style="max-width: 18rem;">
-          <img src="catparty1.jpg" class="card-img-top" alt="..." />
+        <div class="card eventCard" style="max-width: 18rem;">
+          <img src="img/catparty1.jpg" class="card-img-top" alt="..." />
           <div class="card-body">
             <h5 class="card-title">Event Name</h5>
             <h6>Date</h6>
@@ -237,8 +263,8 @@
             </div>
           </div>
         </div>
-        <div class="card" style="max-width: 18rem;">
-          <img src="catparty3.jpg" class="card-img-top" alt="..." />
+        <div class="card eventCard" style="max-width: 18rem;">
+          <img src="img/catparty3.jpg" class="card-img-top" alt="..." />
           <div class="card-body">
             <h5 class="card-title">Event Name</h5>
             <h6>Date</h6>
@@ -279,121 +305,61 @@
       <hr class="my-4" />
       <form>
         <div class="form-group">
-          <label for="formGroupExampleInput">Create a UserName</label>
+          <label for="nameInput">Create a UserName</label>
           <input
             type="text"
             class="form-control"
-            id="formGroupExampleInput"
+            id="uName"
             placeholder="Your Name"
           />
         </div>
 
         <div class="form-group">
-          <label for="exampleFormControlInput1">Email address</label>
+          <label for="emailInput">Email address</label>
           <input
             type="email"
             class="form-control"
-            id="exampleFormControlInput1"
+            id="uEmail"
             placeholder="name@example.com"
           />
         </div>
 
         <div class="form-group">
-          <label for="formGroupExampleInput2">Add a Photo Link</label>
+          <label for="photoLink">Add a Photo Link</label>
           <input
             type="text"
             class="form-control"
-            id="formGroupExampleInput2"
+            id="uPhoto"
             placeholder="Photo Link"
           />
         </div>
 
-        <div class="form-check form-check-inline">
-          <input
-            class="form-check-input"
-            type="checkbox"
-            id="inlineCheckbox1"
-            value="option1"
-          />
-          <label class="form-check-label" for="inlineCheckbox1"
-            >Dog Parent</label
-          >
+        <div class="form-group">
+          <label for="">Type of Pet</label>
+          <select class="form-control" id="petType">
+            <option value="">click to open pet type menu..</option>
+            <option value="dog">Dog</option>
+            <option value="cat">Cat</option>
+            <option value="bird">Bird</option>
+            <option value="fish">Fish</option>
+            <option value="reptile">Reptile</option>
+            <option value="multipet">I Live on an Ark</option>
+          </select>
         </div>
-
-        <div class="form-check form-check-inline">
-          <input
-            class="form-check-input"
-            type="checkbox"
-            id="inlineCheckbox2"
-            value="option2"
-          />
-          <label class="form-check-label" for="inlineCheckbox2"
-            >Cat Parent</label
-          >
-        </div>
-
-        <div class="form-check form-check-inline">
-          <input
-            class="form-check-input"
-            type="checkbox"
-            id="inlineCheckbox3"
-            value="option3"
-          />
-          <label class="form-check-label" for="inlineCheckbox3"
-            >Reptile Parent</label
-          >
-        </div>
-
-        <div class="form-check form-check-inline">
-          <input
-            class="form-check-input"
-            type="checkbox"
-            id="inlineCheckbox1"
-            value="option1"
-          />
-          <label class="form-check-label" for="inlineCheckbox1"
-            >Bird Parent</label
-          >
-        </div>
-
-        <div class="form-check form-check-inline">
-          <input
-            class="form-check-input"
-            type="checkbox"
-            id="inlineCheckbox2"
-            value="option2"
-          />
-          <label class="form-check-label" for="inlineCheckbox2"
-            >Fish Parent</label
-          >
-        </div>
-
-        <div class="form-check form-check-inline">
-          <input
-            class="form-check-input"
-            type="checkbox"
-            id="inlineCheckbox3"
-            value="option3"
-          />
-          <label class="form-check-label" for="inlineCheckbox3"
-            >I Live on an Ark</label
-          >
-        </div>
-        <br />
         <br />
         <div class="form-group">
-          <label for="exampleFormControlTextarea1">Pet Names (limit 3)</label>
-          <textarea
-            class="form-control"
-            id="exampleFormControlTextarea1"
-            rows="3"
+          <label for="petNames">Pet Names (limit 3)</label>
+          <input
+          type="text"
+          class="form-control"
+          id="uPets"
             placeholder="PetName1 PetName2 Petname3"
-          ></textarea>
+          ></input>
         </div>
         <p>*keep your username and email address available to sign in.</p>
       </form>
       <br />
-      <button type="submit" class="btn btn-primary">Add Me</button>
+      <button type="submit" class="btn btn-primary" id="addUser">Add Me</button>
       <br />
       <br />
       <br />
@@ -418,142 +384,91 @@
       <hr class="my-4" />
       <form>
         <div class="form-group">
-          <label for="formGroupExampleInput">Event Name</label>
+          <label for="eventName">Event Name</label>
           <input
             type="text"
             class="form-control"
-            id="formGroupExampleInput"
+            id="eName"
             placeholder="Your Event Name"
           />
         </div>
 
         <div class="form-group">
-          <label for="formGroupExampleInput">Event Date (xx/xx/xx)</label>
+          <label for="eventDate">Event Date (xx/xx/xx)</label>
           <input
             type="text"
             class="form-control"
-            id="formGroupExampleInput"
+            id="eDate"
             placeholder="xx/xx/xx"
           />
         </div>
 
         <div class="form-group">
-          <label for="formGroupExampleInput">Event Time (xx:xx am or pm)</label>
+          <label for="eventTime">Event Time (xx:xx am or pm)</label>
           <input
             type="text"
             class="form-control"
-            id="formGroupExampleInput"
+            id="eTime"
             placeholder="xx:xx am or pm"
           />
         </div>
 
         <div class="form-group">
-          <label for="inputAddress2"
+          <label for="addressLink"
             >Event Address Link (check the links tab)</label
           >
           <input
             type="text"
             class="form-control"
-            id="inputAddress2"
+            id="eLink"
             placeholder="https://fancydogpark.com"
           />
         </div>
 
         <div class="form-group">
-          <label for="inputAddress">Event Address</label>
+          <label for="eventAddress">Event Address</label>
           <input
             type="text"
             class="form-control"
-            id="inputAddress"
+            id="eAdd"
             placeholder="1234 Main St, City, State"
           />
         </div>
 
         <div class="form-group">
-          <label for="formGroupExampleInput">Host UserName</label>
+          <label for="hostName">Host UserName</label>
           <input
             type="text"
             class="form-control"
-            id="formGroupExampleInput"
+            id="hName"
             placeholder="Your Name"
           />
         </div>
 
-        <div class="form-group form-check-inline">
-          <div class="form-check form-check-inline">
-            <input
-              class="form-check-input"
-              type="checkbox"
-              id="inlineCheckbox1"
-              value="option1"
-            />
-            <label class="form-check-label" for="inlineCheckbox1"
-              >Dog Party</label
-            >
-          </div>
+        <div class="form-group">
+          <label for="hostName">Host Email</label>
+          <input
+            type="text"
+            class="form-control"
+            id="hEmail"
+            placeholder="name@example.com"
+          />
+        </div>
 
-          <div class="form-check form-check-inline">
-            <input
-              class="form-check-input"
-              type="checkbox"
-              id="inlineCheckbox2"
-              value="option2"
-            />
-            <label class="form-check-label" for="inlineCheckbox2"
-              >Cat Party</label
-            >
-          </div>
-
-          <div class="form-check form-check-inline">
-            <input
-              class="form-check-input"
-              type="checkbox"
-              id="inlineCheckbox3"
-              value="option3"
-            />
-            <label class="form-check-label" for="inlineCheckbox3"
-              >Reptile Party</label
-            >
-          </div>
-
-          <div class="form-check form-check-inline">
-            <input
-              class="form-check-input"
-              type="checkbox"
-              id="inlineCheckbox1"
-              value="option1"
-            />
-            <label class="form-check-label" for="inlineCheckbox1"
-              >Bird Party</label
-            >
-          </div>
-
-          <div class="form-check form-check-inline">
-            <input
-              class="form-check-input"
-              type="checkbox"
-              id="inlineCheckbox2"
-              value="option2"
-            />
-            <label class="form-check-label" for="inlineCheckbox2"
-              >Fish Party</label
-            >
-          </div>
-
-          <div class="form-check form-check-inline">
-            <input
-              class="form-check-input"
-              type="checkbox"
-              id="inlineCheckbox2"
-              value="option2"
-            />
-            <label class="form-check-label" for="inlineCheckbox2"
-              >Noah's Ark Party</label
-            >
-          </div>
+        <div class="form-group">
+          <label for="">Party Type</label>
+          <select class="form-control" id="partyType">
+            <option value="">click to open party type menu..</option>
+            <option value="dog">Dog Party</option>
+            <option value="cat">Cat Party</option>
+            <option value="bird">Bird Party</option>
+            <option value="fish">Fish Party</option>
+            <option value="reptile">Reptile Party</option>
+            <option value="multipet">All Pets Pets</option>
+          </select>
         </div>
         <br />
-        <button type="submit" class="btn btn-primary">Create Event</button>
+        <button type="submit" class="btn btn-primary" id="addEvent">Create Event</button>
         <br />
         <br />
       </form>
@@ -580,7 +495,7 @@
       <hr class="my-4" />
       <div class="card-columns">
         <div class="card" style="max-width: 18rem;">
-          <img src="reptileParty.jpg" class="card-img-top" alt="..." />
+          <img src="img/reptileParty.jpg" class="card-img-top" alt="..." />
           <div class="card-body">
             <h5 class="card-title">Event Name</h5>
             <h6>Date</h6>
@@ -604,7 +519,7 @@
           </div>
         </div>
         <div class="card" style="max-width: 18rem;">
-          <img src="catparty1.jpg" class="card-img-top" alt="..." />
+          <img src="img/catparty1.jpg" class="card-img-top" alt="..." />
           <div class="card-body">
             <h5 class="card-title">Event Name</h5>
             <h6>Date</h6>
@@ -628,7 +543,7 @@
           </div>
         </div>
         <div class="card" style="max-width: 18rem;">
-          <img src="dogparksall.jpg" class="card-img-top" alt="..." />
+          <img src="img/dogparksall.jpg" class="card-img-top" alt="..." />
           <div class="card-body">
             <h5 class="card-title">Event Name</h5>
             <h6>Date</h6>
@@ -741,7 +656,7 @@
             </button>
           </div>
           <div class="modal-body">
-            <img src="sampleUser.jpg" class="card-img-top" alt="..." />
+            <img src="img/sampleUser.jpg" class="card-img-top" alt="..." />
             <h5 class="card-title">Dog Dad Supreme</h5>
             <ul class="list-group list-group-flush">
               <li class="list-group-item">PetLoover@Example.com</li>
@@ -771,7 +686,7 @@
       <div class="modal-dialog" role="document">
         <div class="modal-content" style="background-color:rgb(151, 198, 209);">
           <div class="modal-header">
-            <h5 class="modal-title">Udate My Event</h5>
+            <h5 class="modal-title">Update My Event</h5>
             <button
               type="button"
               class="close"
