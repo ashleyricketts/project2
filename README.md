@@ -1,6 +1,6 @@
 # project 2 (Ashley, Bosco, & Andy)
 
-![Logo](public\assets\img\logo.jpg)
+![Logo](public/assets/img/logo.jpg)
 
 ## _W/ Pet Party we have:_
 
