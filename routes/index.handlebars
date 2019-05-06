@@ -1,5 +1,4 @@
- <body>
-    <br />
+<br />
     <br />
     <!-- nav bar -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
@@ -61,7 +60,7 @@
     <div class="container-fluid" id="home">
       <div class="jumbotron">
         <img
-          src=""
+          src="img/logo.jpg"
           alt="responsive logo"
           style="height:auto; width:100%;"
           class="img-fluid"
@@ -98,106 +97,148 @@
       <br />
       <h2>New Events</h2>
       <hr class="my-4" />
-      <div class="card-columns">
-        <div class="card" style="max-width: 18rem;">
-          <img src="dogparks1.jpg" class="card-img-top" alt="..." />
+      <div class="card-columns text-center" id="eventArea">
+        <div class="card eventCard" style="max-width: 18rem;" id="id">
+          <img src="img/dogparks1.jpg" class="card-img-top" alt="..." />
           <div class="card-body">
             <h5 class="card-title">Event Name</h5>
             <h6>Date</h6>
             <h6>Time</h6>
             <h6>Party Type</h6>
             <h6>Location</h6>
-            <br />
-            <button type="button" class="btn btn-outline-info">Going</button>
+            <a href="#" class="card-link">location link</a>
             <br />
             <br />
             <div class="card-footer">
-              <a href="#" class="card-link">location link</a>
+              <div class="btn-group btn-group-sm" role="group">
+                <button type="button" class="btn btn-outline-success going">Going</button>
+                <button type="button" class="btn btn-outline-danger notGoing">Not Going</button>
+                <button type="button" class="btn btn-outline-info updateBtn"
+                data-toggle="modal"
+                data-target="#eventUpdate"
+                role="button"
+                id="updatebtn">Update</button>
+              </div>
             </div>
           </div>
         </div>
-        <div class="card" style="max-width: 18rem;">
-          <img src="dogparks2.jpg" class="card-img-top" alt="..." />
+        <div class="card eventCard" style="max-width: 18rem;" id="id">
+          <img src="img/reptileParty.jpg" class="card-img-top" alt="..." />
           <div class="card-body">
             <h5 class="card-title">Event Name</h5>
             <h6>Date</h6>
             <h6>Time</h6>
             <h6>Party Type</h6>
             <h6>Location</h6>
-            <br />
-            <button type="button" class="btn btn-outline-info">Going</button>
+            <a href="#" class="card-link">location link</a>
             <br />
             <br />
             <div class="card-footer">
-              <a href="#" class="card-link">location link</a>
+              <div class="btn-group btn-group-sm" role="group">
+                <button type="button" class="btn btn-outline-success going">Going</button>
+                <button type="button" class="btn btn-outline-danger notGoing">Not Going</button>
+                <button type="button" class="btn btn-outline-info updateBtn"
+                data-toggle="modal"
+                data-target="#eventUpdate"
+                role="button"
+                id="updatebtn">Update</button>
+              </div>
             </div>
           </div>
         </div>
-        <div class="card" style="max-width: 18rem;">
-          <img src="dogparksall.jpg" class="card-img-top" alt="..." />
+        <div class="card eventCard" style="max-width: 18rem;" id="id">
+          <img src="img/catparty.jpg" class="card-img-top" alt="..." />
           <div class="card-body">
             <h5 class="card-title">Event Name</h5>
             <h6>Date</h6>
             <h6>Time</h6>
             <h6>Party Type</h6>
             <h6>Location</h6>
-            <br />
-            <button type="button" class="btn btn-outline-info">Going</button>
+            <a href="#" class="card-link">location link</a>
             <br />
             <br />
             <div class="card-footer">
-              <a href="#" class="card-link">location link</a>
+              <div class="btn-group btn-group-sm" role="group">
+                <button type="button" class="btn btn-outline-success going">Going</button>
+                <button type="button" class="btn btn-outline-danger notGoing">Not Going</button>
+                <button type="button" class="btn btn-outline-info updateBtn"
+                data-toggle="modal"
+                data-target="#eventUpdate"
+                role="button"
+                id="updatebtn">Update</button>
+              </div>
             </div>
           </div>
         </div>
-        <div class="card" style="max-width: 18rem;">
-          <img src="catparty.jpg" class="card-img-top" alt="..." />
+        <div class="card eventCard" style="max-width: 18rem;" id="id">
+          <img src="img/dogparks2.jpg" class="card-img-top" alt="..." />
           <div class="card-body">
             <h5 class="card-title">Event Name</h5>
             <h6>Date</h6>
             <h6>Time</h6>
             <h6>Party Type</h6>
             <h6>Location</h6>
-            <br />
-            <button type="button" class="btn btn-outline-info">Going</button>
+            <a href="#" class="card-link">location link</a>
             <br />
             <br />
             <div class="card-footer">
-              <a href="#" class="card-link">location link</a>
+              <div class="btn-group btn-group-sm" role="group">
+                <button type="button" class="btn btn-outline-success going">Going</button>
+                <button type="button" class="btn btn-outline-danger notGoing">Not Going</button>
+                <button type="button" class="btn btn-outline-info updateBtn"
+                data-toggle="modal"
+                data-target="#eventUpdate"
+                role="button"
+                id="updatebtn">Update</button>
+              </div>
             </div>
           </div>
         </div>
-        <div class="card" style="max-width: 18rem;">
-          <img src="catparty1.jpg" class="card-img-top" alt="..." />
+        <div class="card eventCard" style="max-width: 18rem;" id="id">
+          <img src="img/dogparksall.jpg" class="card-img-top" alt="..." />
           <div class="card-body">
             <h5 class="card-title">Event Name</h5>
             <h6>Date</h6>
             <h6>Time</h6>
             <h6>Party Type</h6>
             <h6>Location</h6>
-            <br />
-            <button type="button" class="btn btn-outline-info">Going</button>
+            <a href="#" class="card-link">location link</a>
             <br />
             <br />
             <div class="card-footer">
-              <a href="#" class="card-link">location link</a>
+              <div class="btn-group btn-group-sm" role="group">
+                <button type="button" class="btn btn-outline-success going">Going</button>
+                <button type="button" class="btn btn-outline-danger notGoing">Not Going</button>
+                <button type="button" class="btn btn-outline-info updateBtn"
+                data-toggle="modal"
+                data-target="#eventUpdate"
+                role="button"
+                id="updatebtn">Update</button>
+              </div>
             </div>
           </div>
         </div>
-        <div class="card" style="max-width: 18rem;">
-          <img src="catparty3.jpg" class="card-img-top" alt="..." />
+        <div class="card eventCard" style="max-width: 18rem;" id="id">
+          <img src="img/catparty1.jpg" class="card-img-top" alt="..." />
           <div class="card-body">
             <h5 class="card-title">Event Name</h5>
             <h6>Date</h6>
             <h6>Time</h6>
             <h6>Party Type</h6>
             <h6>Location</h6>
-            <br />
-            <button type="button" class="btn btn-outline-info">Going</button>
+            <a href="#" class="card-link">location link</a>
             <br />
             <br />
             <div class="card-footer">
-              <a href="#" class="card-link">location link</a>
+              <div class="btn-group btn-group-sm" role="group">
+                <button type="button" class="btn btn-outline-success going">Going</button>
+                <button type="button" class="btn btn-outline-danger notGoing">Not Going</button>
+                <button type="button" class="btn btn-outline-info updateBtn"
+                data-toggle="modal"
+                data-target="#eventUpdate"
+                role="button"
+                id="updatebtn">Update</button>
+              </div>
             </div>
           </div>
         </div>
@@ -224,123 +265,64 @@
       <br />
       <h2>New to Pet Party?</h2>
       <hr class="my-4" />
-      <form>
+      <form class="was-validated">
         <div class="form-group">
-          <label for="formGroupExampleInput">Create a UserName</label>
+          <label for="validationInput">Create User Name</label>
           <input
-            type="text"
-            class="form-control"
-            id="formGroupExampleInput"
-            placeholder="Your Name"
+            class="form-control is-invalid" 
+            id="uName"
+            placeholder="Create User Name"
+            required
           />
         </div>
 
         <div class="form-group">
-          <label for="exampleFormControlInput1">Email address</label>
+          <label for="validationInput">Add User Email</label>
           <input
-            type="email"
-            class="form-control"
-            id="exampleFormControlInput1"
+            class="form-control is-invalid"
+            id="uEmail"
             placeholder="name@example.com"
+            required
           />
         </div>
 
         <div class="form-group">
-          <label for="formGroupExampleInput2">Add a Photo Link</label>
+          <label for="validationInput">Add a Photo link</label>
           <input
-            type="text"
-            class="form-control"
-            id="formGroupExampleInput2"
-            placeholder="Photo Link"
+            class="form-control is-invalid"
+            id="uPhoto"
+            placeholder="Add a Photo Link"
+            required
           />
         </div>
 
-        <div class="form-check form-check-inline">
-          <input
-            class="form-check-input"
-            type="checkbox"
-            id="inlineCheckbox1"
-            value="option1"
-          />
-          <label class="form-check-label" for="inlineCheckbox1"
-            >Dog Parent</label
-          >
+        <div class="form-group">
+          <label for="validationInput">Type of Pet</label>
+          <select class="custom-select" required id="petType">
+            <option value="">click to open pet type menu..</option>
+            <option value="dog">Dog</option>
+            <option value="cat">Cat</option>
+            <option value="bird">Bird</option>
+            <option value="fish">Fish</option>
+            <option value="reptile">Reptile</option>
+            <option value="multipet">I Live on an Ark</option>
+          </select>
         </div>
-
-        <div class="form-check form-check-inline">
-          <input
-            class="form-check-input"
-            type="checkbox"
-            id="inlineCheckbox2"
-            value="option2"
-          />
-          <label class="form-check-label" for="inlineCheckbox2"
-            >Cat Parent</label
-          >
-        </div>
-
-        <div class="form-check form-check-inline">
-          <input
-            class="form-check-input"
-            type="checkbox"
-            id="inlineCheckbox3"
-            value="option3"
-          />
-          <label class="form-check-label" for="inlineCheckbox3"
-            >Reptile Parent</label
-          >
-        </div>
-
-        <div class="form-check form-check-inline">
-          <input
-            class="form-check-input"
-            type="checkbox"
-            id="inlineCheckbox1"
-            value="option1"
-          />
-          <label class="form-check-label" for="inlineCheckbox1"
-            >Bird Parent</label
-          >
-        </div>
-
-        <div class="form-check form-check-inline">
-          <input
-            class="form-check-input"
-            type="checkbox"
-            id="inlineCheckbox2"
-            value="option2"
-          />
-          <label class="form-check-label" for="inlineCheckbox2"
-            >Fish Parent</label
-          >
-        </div>
-
-        <div class="form-check form-check-inline">
-          <input
-            class="form-check-input"
-            type="checkbox"
-            id="inlineCheckbox3"
-            value="option3"
-          />
-          <label class="form-check-label" for="inlineCheckbox3"
-            >I Live on an Ark</label
-          >
-        </div>
-        <br />
         <br />
         <div class="form-group">
-          <label for="exampleFormControlTextarea1">Pet Names (limit 3)</label>
-          <textarea
-            class="form-control"
-            id="exampleFormControlTextarea1"
-            rows="3"
-            placeholder="PetName1 PetName2 Petname3"
-          ></textarea>
+          <label for="validationInput">Pet Names (limit 3)</label>
+          <input
+          type="text"
+          class="form-control is-invalid"
+          id="uPets"
+          placeholder="PetName1, PetName2, Petname3"
+          required
+          ></input>
         </div>
         <p>*keep your username and email address available to sign in.</p>
       </form>
       <br />
-      <button type="submit" class="btn btn-primary">Add Me</button>
+      <button type="button" class="btn btn-primary" id="addUser">Add Me</button>
       <br />
       <br />
       <br />
@@ -363,144 +345,100 @@
       <br />
       <h2>Create a New Event</h2>
       <hr class="my-4" />
-      <form>
+      <form class="was-validated">
         <div class="form-group">
-          <label for="formGroupExampleInput">Event Name</label>
+          <label for="validationInput">Event Name</label>
           <input
             type="text"
-            class="form-control"
-            id="formGroupExampleInput"
+            class="form-control is-invalid"
+            id="eName"
             placeholder="Your Event Name"
+            required
           />
         </div>
 
         <div class="form-group">
-          <label for="formGroupExampleInput">Event Date (xx/xx/xx)</label>
+          <label for="validationInput">Event Date (xx/xx/xx)</label>
           <input
             type="text"
-            class="form-control"
-            id="formGroupExampleInput"
+            class="form-control is-invalid"
+            id="eDate"
             placeholder="xx/xx/xx"
+            required
           />
         </div>
 
         <div class="form-group">
-          <label for="formGroupExampleInput">Event Time (xx:xx am or pm)</label>
+          <label for="validationInput">Event Time (xx:xx am or pm)</label>
           <input
             type="text"
-            class="form-control"
-            id="formGroupExampleInput"
+            class="form-control is-invalid"
+            id="eTime"
             placeholder="xx:xx am or pm"
+            required
           />
         </div>
 
         <div class="form-group">
-          <label for="inputAddress2"
+          <label for="validationInput"
             >Event Address Link (check the links tab)</label
           >
           <input
             type="text"
-            class="form-control"
-            id="inputAddress2"
+            class="form-control is-invalid"
+            id="eLink"
             placeholder="https://fancydogpark.com"
+            required
           />
         </div>
 
         <div class="form-group">
-          <label for="inputAddress">Event Address</label>
+          <label for="validationInput">Event Address</label>
           <input
             type="text"
-            class="form-control"
-            id="inputAddress"
+            class="form-control is-invalid"
+            id="eAdd"
             placeholder="1234 Main St, City, State"
+            required
           />
         </div>
 
         <div class="form-group">
-          <label for="formGroupExampleInput">Host UserName</label>
+          <label for="validationInput">Host UserName</label>
           <input
             type="text"
-            class="form-control"
-            id="formGroupExampleInput"
+            class="form-control is-invalid"
+            id="hName"
             placeholder="Your Name"
+            required
           />
         </div>
 
-        <div class="form-group form-check-inline">
-          <div class="form-check form-check-inline">
-            <input
-              class="form-check-input"
-              type="checkbox"
-              id="inlineCheckbox1"
-              value="option1"
-            />
-            <label class="form-check-label" for="inlineCheckbox1"
-              >Dog Party</label
-            >
-          </div>
+        <div class="form-group">
+          <label for="validationInput">Host Email</label>
+          <input
+            type="text"
+            class="form-control is-invalid"
+            id="hEmail"
+            placeholder="name@example.com"
+            required
+          />
+        </div>
 
-          <div class="form-check form-check-inline">
-            <input
-              class="form-check-input"
-              type="checkbox"
-              id="inlineCheckbox2"
-              value="option2"
-            />
-            <label class="form-check-label" for="inlineCheckbox2"
-              >Cat Party</label
-            >
-          </div>
-
-          <div class="form-check form-check-inline">
-            <input
-              class="form-check-input"
-              type="checkbox"
-              id="inlineCheckbox3"
-              value="option3"
-            />
-            <label class="form-check-label" for="inlineCheckbox3"
-              >Reptile Party</label
-            >
-          </div>
-
-          <div class="form-check form-check-inline">
-            <input
-              class="form-check-input"
-              type="checkbox"
-              id="inlineCheckbox1"
-              value="option1"
-            />
-            <label class="form-check-label" for="inlineCheckbox1"
-              >Bird Party</label
-            >
-          </div>
-
-          <div class="form-check form-check-inline">
-            <input
-              class="form-check-input"
-              type="checkbox"
-              id="inlineCheckbox2"
-              value="option2"
-            />
-            <label class="form-check-label" for="inlineCheckbox2"
-              >Fish Party</label
-            >
-          </div>
-
-          <div class="form-check form-check-inline">
-            <input
-              class="form-check-input"
-              type="checkbox"
-              id="inlineCheckbox2"
-              value="option2"
-            />
-            <label class="form-check-label" for="inlineCheckbox2"
-              >Noah's Ark Party</label
-            >
-          </div>
+        <div class="form-group">
+          <label for="validationInput">Party Type</label>
+          <select class="custom-select" required id="partyType">
+            <option value="">click to open party type menu..</option>
+            <option value="dog">Dog Party</option>
+            <option value="cat">Cat Party</option>
+            <option value="bird">Bird Party</option>
+            <option value="fish">Fish Party</option>
+            <option value="reptile">Reptile Party</option>
+            <option value="multipet">All Pets Pets</option>
+          </select>
         </div>
         <br />
-        <button type="submit" class="btn btn-primary">Create Event</button>
+        <button type="submit" class="btn btn-primary" id="addEvent">Create Event</button>
         <br />
         <br />
       </form>
@@ -525,79 +463,9 @@
       <br />
       <h2>My Events</h2>
       <hr class="my-4" />
-      <div class="card-columns">
-        <div class="card" style="max-width: 18rem;">
-          <img src="reptileParty.jpg" class="card-img-top" alt="..." />
-          <div class="card-body">
-            <h5 class="card-title">Event Name</h5>
-            <h6>Date</h6>
-            <h6>Time</h6>
-            <h6>Party Type</h6>
-            <h6>Location</h6>
-            <br />
-            <a
-              class="btn btn-outline-info updateBtn"
-              data-toggle="modal"
-              data-target="#eventUpdate"
-              role="button"
-              id="updatebtn"
-              >UpDate</a
-            >
-            <br />
-            <br />
-            <div class="card-footer">
-              <a href="#" class="card-link">location link</a>
-            </div>
-          </div>
-        </div>
-        <div class="card" style="max-width: 18rem;">
-          <img src="catparty1.jpg" class="card-img-top" alt="..." />
-          <div class="card-body">
-            <h5 class="card-title">Event Name</h5>
-            <h6>Date</h6>
-            <h6>Time</h6>
-            <h6>Party Type</h6>
-            <h6>Location</h6>
-            <br />
-            <a
-              class="btn btn-outline-info updateBtn"
-              data-toggle="modal"
-              data-target="#eventUpdate"
-              role="button"
-              id="updatebtn"
-              >UpDate</a
-            >
-            <br />
-            <br />
-            <div class="card-footer">
-              <a href="#" class="card-link">location link</a>
-            </div>
-          </div>
-        </div>
-        <div class="card" style="max-width: 18rem;">
-          <img src="dogparksall.jpg" class="card-img-top" alt="..." />
-          <div class="card-body">
-            <h5 class="card-title">Event Name</h5>
-            <h6>Date</h6>
-            <h6>Time</h6>
-            <h6>Party Type</h6>
-            <h6>Location</h6>
-            <br />
-            <a
-              class="btn btn-outline-info updateBtn"
-              data-toggle="modal"
-              data-target="#eventUpdate"
-              role="button"
-              id="updatebtn"
-              >UpDate</a
-            >
-            <br />
-            <br />
-            <div class="card-footer">
-              <a href="#" class="card-link">location link</a>
-            </div>
-          </div>
-        </div>
+      <div class="card-columns" id="myEvent">
+      
+       
       </div>
       <br />
     </div>
@@ -688,7 +556,7 @@
             </button>
           </div>
           <div class="modal-body">
-            <img src="sampleUser.jpg" class="card-img-top" alt="..." />
+            <img src="img/sampleUser.jpg" class="card-img-top" alt="..." />
             <h5 class="card-title">Dog Dad Supreme</h5>
             <ul class="list-group list-group-flush">
               <li class="list-group-item">PetLoover@Example.com</li>
@@ -718,7 +586,7 @@
       <div class="modal-dialog" role="document">
         <div class="modal-content" style="background-color:rgb(151, 198, 209);">
           <div class="modal-header">
-            <h5 class="modal-title">Udate My Event</h5>
+            <h5 class="modal-title">Update My Event</h5>
             <button
               type="button"
               class="close"
@@ -808,6 +676,3 @@
         </div>
       </div>
     </div>
-
-    <script type="text/javascript"></script>
-  </body>
