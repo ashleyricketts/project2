@@ -1,10 +1,10 @@
 # project 2 (Ashley, Bosco, & Andy)
 
-![Logo](public/assets/img/logo.jpg)
+![Logo](public/logo.jpg)
 
 ## _W/ Pet Party we have:_
 
-_Basic front end functions:_
+### _Basic Features:_
 
 Create NewUser from Create Member Div add to UserTable w/ _addMe BTN_
 
@@ -26,12 +26,14 @@ Populate My Events Div with Selected Events by ID to User by ID [auto],
 
 Update My Events _notGoing BTN_ (Table Boolean)
 
-_Optional features in Footer:_
+### _Additional features in Footer:_
 
-Helpful Links [BringFido, Habit, Parks&Rec, ETC],
+Helpful Links [BringFido & Catster],
 
-OpenWeather API link,
+Google Weather link,
 
 Google Calendar Link,
 
-GPS Link
+Google Maps Link
+
+### _Heroku Deployment Link

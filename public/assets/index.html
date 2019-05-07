@@ -81,6 +81,7 @@
  
     </style>
   </head>
+
   <body>
     <br />
     <br />
@@ -140,7 +141,9 @@
       </div>
     </nav>
     <!-- logo Banner -->
-    <br /> 
+    <br />
+    <br />
+    <br />
        <div class="container-fluid" id="home">
       <div class="jumbotron">
         <img
@@ -169,318 +172,10 @@
       </div>
     </div>
     <br />
-    <br />
-    <!-- Event Boards -->
-    <div
-      class="container"
-      id="Events"
-      style="background-color:rgb(151, 198, 209);"
-    >
-      <br />
-      <br />
-      <br />
-      <h2>New Events</h2>
-      <hr class="my-4" />
-      <div class="card-columns text-center" id="eventArea">
-        <div class="card eventCard" style="max-width: 18rem;" id="id1">
-          <img src="dogparksall.jpg" class="card-img-top" alt="..." />
-          <div class="card-body">
-            <h5 class="card-title">BowWowWowathon</h5>
-            <h6>05/30/19</h6>
-            <h6>04:30p</h6>
-            <h6>Dog Party</h6>
-            <h6>DogDadSupreme</h6>
-            <h6>PetLoover@Example.com</h6>
-            <h6>PercyWarnerDogPark</h6>
-            <a href="" class="card-link">https://www.bringfido.com/attraction/3740?map=on</a>
-            <br />
-            <br />
-            <div class="card-footer">
-              <div class="btn-group btn-group-sm" role="group">
-                <button type="button" class="btn btn-success going">Going</button>
-                <button type="button" class="btn btn-danger notGoing">Not Going</button>
-                <button type="button" class="btn btn-info updateBtn"
-                data-toggle="modal"
-                data-target="#eventUpdate"
-                role="button"
-                id="updatebtn">Update</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="card eventCard" style="max-width: 18rem;" id="id">
-          <img src="reptileParty.jpg" class="card-img-top" alt="..." />
-          <div class="card-body">
-            <h5 class="card-title">Lizard Lounge</h5>
-            <h6>07/05/73</h6>
-            <h6>06:30pm</h6>
-            <h6>Reptile Party</h6>
-            <h6>Slytherin Hall</h6>
-            <h6>Salazar Slytherin</h6>
-            <h6>nomugglesallowed@hogwarts.com</h6>
-            <a href="#" class="card-link">https://www.google.com/maps/place/Slitherin+Reptiles/@52.7267142,-1.3758297,17z/data=!3m1!4b1!4m5!3m4!1s0x4879e2d4802af291:0x7721094169a9d9a!8m2!3d52.726711!4d-1.373641</a>
-            <br />
-            <br />
-            <div class="card-footer">
-              <div class="btn-group btn-group-sm" role="group">
-                <button type="button" class="btn btn-success going">Going</button>
-                <button type="button" class="btn btn-danger notGoing">Not Going</button>
-                <button type="button" class="btn btn-info updateBtn"
-                data-toggle="modal"
-                data-target="#eventUpdate"
-                role="button"
-                id="updatebtn">Update</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="card eventCard" style="max-width: 18rem;" id="id">
-          <img src="catparty1.jpg" class="card-img-top" alt="..." />
-          <div class="card-body">
-            <h5 class="card-title">Grumpy Cat's Bday Bash</h5>
-            <h6>06/04/2019</h6>
-            <h6>09:00a</h6>
-            <h6>Cat Party</h6>
-            <h6>MusicCityCats</h6>
-            <a href="#" class="card-link">https://musiccitycats.com/</a>
-            <br />
-            <br />
-            <div class="card-footer">
-              <div class="btn-group btn-group-sm" role="group">
-                <button type="button" class="btn btn-success going">Going</button>
-                <button type="button" class="btn btn-danger notGoing">Not Going</button>
-                <button type="button" class="btn btn-info updateBtn"
-                data-toggle="modal"
-                data-target="#eventUpdate"
-                role="button"
-                id="updatebtn">Update</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <br />
-      <br />
-    </div>
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <!-- New Member Form -->
-    <div
-      class="container"
-      id="newMembers"
-      style="background-color:rgb(151, 198, 209);"
-    >
-      <br />
-      <br />
-      <br />
-      <br />
-      <h2>New to Pet Party?</h2>
-      <hr class="my-4" />
-      <form class="was-validated">
-        <div class="form-group">
-          <label for="validationInput">Create User Name</label>
-          <input
-          type="text"
-            class="form-control is-invalid" 
-            id="uName"
-            placeholder="Create User Name"
-            required
-          />
-        </div>
+  
+    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ HEAD/STYLE/NAVBAR/LOGO BANNER/FOOTER MUST BE ON EACH HTML~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-        <div class="form-group">
-          <label for="validationInput">Add User Email</label>
-          <input
-          type="text"
-            class="form-control is-invalid"
-            id="uEmail"
-            placeholder="name@example.com"
-            required
-          />
-        </div>
-
-        <div class="form-group">
-          <label for="validationInput">Add a Photo link</label>
-          <input
-          type="text"
-            class="form-control is-invalid"
-            id="uPhoto"
-            placeholder="Add a Photo Link"
-            required
-          />
-        </div>
-        <div class="form-group">
-          <label for="validationInput">Type of Pet</label>
-          <select class="custom-select" required id="petType">
-            <option value="">click to open pet type menu..</option>
-            <option value="dog">Dog</option>
-            <option value="cat">Cat</option>
-            <option value="bird">Bird</option>
-            <option value="fish">Fish</option>
-            <option value="reptile">Reptile</option>
-            <option value="multipet">I Live on an Ark</option>
-          </select>
-        </div>
-        <br />
-        <div class="form-group">
-          <label for="validationInput">Pet Names (limit 3)</label>
-          <input
-          type="text"
-          class="form-control is-invalid user"
-          id="uPets"
-          placeholder="PetName1, PetName2, Petname3"
-          required
-          ></input>
-        </div>
-        <p>*keep your username and email address available to sign in.</p>
-      <br />
-      <button type="submit" class="btn btn-primary" id="addUser">Add Me</button>
-      <br />
-    </form>
-      <br />
-      <br />
-    </div>
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <!-- create event form -->
-    <div
-      class="container"
-      id="eventCreate"
-      style="background-color:rgb(151, 198, 209);"
-    >
-      <br />
-      <br />
-      <br />
-      <br />
-      <h2>Create a New Event</h2>
-      <hr class="my-4" />
-      <form class="was-validated">
-        <div class="form-group">
-          <label for="validationInput">Event Name</label>
-          <input
-            type="text"
-            class="form-control is-invalid"
-            id="eName"
-            placeholder="Your Event Name"
-            required
-          />
-        </div>
-
-        <div class="form-group">
-          <label for="validationInput">Event Date (xx/xx/xx)</label>
-          <input
-            type="text"
-            class="form-control is-invalid"
-            id="eDate"
-            placeholder="xx/xx/xx"
-            required
-          />
-        </div>
-
-        <div class="form-group">
-          <label for="validationInput">Event Time (xx:xx am or pm)</label>
-          <input
-            type="text"
-            class="form-control is-invalid"
-            id="eTime"
-            placeholder="xx:xx am or pm"
-            required
-          />
-        </div>
-
-        <div class="form-group">
-          <label for="validationInput"
-            >Event Address Link (check the links tab)</label
-          >
-          <input
-            type="text"
-            class="form-control is-invalid"
-            id="eLink"
-            placeholder="https://fancydogpark.com"
-            required
-          />
-        </div>
-
-        <div class="form-group">
-          <label for="validationInput">Event Address</label>
-          <input
-            type="text"
-            class="form-control is-invalid"
-            id="eAdd"
-            placeholder="1234 Main St, City, State"
-            required
-          />
-        </div>
-
-        <div class="form-group">
-          <label for="validationInput">Host UserName</label>
-          <input
-            type="text"
-            class="form-control is-invalid"
-            id="hName"
-            placeholder="Your Name"
-            required
-          />
-        </div>
-        <div class="form-group">
-          <label for="validationInput">Party Type</label>
-          <select class="custom-select" required id="partyType">
-            <option value="">click to open party type menu..</option>
-            <option value="dog">Dog Party</option>
-            <option value="cat">Cat Party</option>
-            <option value="bird">Bird Party</option>
-            <option value="fish">Fish Party</option>
-            <option value="reptile">Reptile Party</option>
-            <option value="multipet">All Pets Pets</option>
-          </select>
-        </div>
-        <br />
-        <button type="submit" class="btn btn-primary" id="addEvent">Create Event</button>
-        <br />
-        <br />
-      </form>
-      <br />
-      <br />
-    </div>
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <!--  My Events Boards -->
-    <div
-      class="container"
-      id="myEvents"
-      style="background-color:rgb(151, 198, 209);"
-    >
-      <br />
-      <br />
-      <br />
-      <br />
-      <h2>My Events</h2>
-      <hr class="my-4" />
-      <div class="card-columns" id="myEvent">
-             
-      </div>
-      <br />
-    </div>
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SIGN IN/ USER UPDATE HTML (may need to be on main)~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
     <!-- Sign In Modal -->
     <div class="modal" tabindex="-1" role="dialog" id="myModal">
       <div class="modal-dialog" role="document">
@@ -588,101 +283,6 @@
         </div>
       </div>
     </div>
-    <!-- Update Event Modal -->
-    <div class="modal" tabindex="-1" role="dialog" id="eventUpdate">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content" style="background-color:rgb(151, 198, 209);">
-          <div class="modal-header">
-            <h5 class="modal-title">Update My Event</h5>
-            <button
-              type="button"
-              class="close"
-              data-dismiss="modal"
-              aria-label="Close"
-            >
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <div class="container">
-              <form>
-                <div class="form-group">
-                  <label for="changeName"> Change Event Name</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="changeEname"
-                    placeholder="Your Event Name"
-                  />
-                </div>
-                <div class="form-group">
-                  <label for="changeEdate"
-                    >Change Event Date (xx/xx/xx)</label
-                  >
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="changeEdate"
-                    placeholder="xx/xx/xx"
-                  />
-                </div>
-                <div class="form-group">
-                  <label for="changeEtime">
-                    Change Event Time (xx:xx am or pm)</label
-                  >
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="changeEtime"
-                    placeholder="xx:xx am or pm"
-                  />
-                </div>
-                <div class="form-group">
-                  <label for="inputAddress2"
-                    >Change Event Address Link (check the links tab)</label
-                  >
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="inputAddress2"
-                    placeholder="https://fancydogpark.com"
-                  />
-                </div>
-                <div class="form-group">
-                  <label for="inputAddress">Change Event Address</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="inputAddress"
-                    placeholder="1234 Main St, City, State"
-                  />
-                </div>
-                <br />
-                <button type="submit" class="btn btn-primary" id="updateEvent">
-                  Update Event
-                </button>
-                <br />
-                <br />
-                <button type="submit" class="btn btn-primary" id="deleteEvent">
-                  Delete Event
-                </button>
-                <br />
-                <br />
-              </form>
-              <div class="modal-footer">
-                <button
-                  type="button"
-                  class="btn btn-secondary"
-                  data-dismiss="modal"
-                >
-                  Close
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
     <!-- Update User Modal -->
     <div class="modal" tabindex="-1" role="dialog" id="profileUpdate">
       <div class="modal-dialog" role="document">
@@ -725,6 +325,432 @@
         </div>
       </div>
     </div>
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SIGN IN/ USER UPDATE HTML~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~EVENT HTML~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <!-- EventsArea -->
+    <div
+      class="container"
+      id="Events"
+      style="background-color:rgb(151, 198, 209);"
+    >
+      <br />
+      <br />
+      <br />
+      <h2>New Events</h2>
+      <hr class="my-4" />
+      <div class="card-columns" id="eventArea">
+        <div class="card eventCard" style="max-width: 18rem;" id="id1">
+          <img src="dogparksall.jpg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">BowWowWowathon</h5>
+            <h6>05/30/19</h6>
+            <h6>04:30p</h6>
+            <h6>Dog Party</h6>
+            <h6>DogDadSupreme</h6>
+            <h6>PetLoover@Example.com</h6>
+            <h6>PercyWarnerDogPark</h6>
+            <a href="" class="card-link">https://www.bringfido.com/attraction/3740?map=on</a>
+            <br />
+            <br />
+            <div class="card-footer">
+              <div class="btn-group btn-group-sm" role="group">
+                <button type="button" class="btn btn-success going">Going</button>
+                <button type="button" class="btn btn-danger notGoing">Not Going</button>
+                <button type="button" class="btn btn-info updateBtn"
+                data-toggle="modal"
+                data-target="#eventUpdate"
+                role="button"
+                id="updatebtn">Update</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card eventCard" style="max-width: 18rem;" id="id">
+          <img src="reptileParty.jpg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">Lizard Lounge</h5>
+            <h6>07/05/73</h6>
+            <h6>06:30pm</h6>
+            <h6>Reptile Party</h6>
+            <h6>Slytherin Hall</h6>
+            <h6>Salazar Slytherin</h6>
+            <h6>nomugglesallowed@hogwarts.com</h6>
+            <a href="#" class="card-link">https://www.google.com/maps/place/Slitherin+Reptiles/@52.7267142,-1.3758297,17z/data=!3m1!4b1!4m5!3m4!1s0x4879e2d4802af291:0x7721094169a9d9a!8m2!3d52.726711!4d-1.373641</a>
+            <br />
+            <br />
+            <div class="card-footer">
+              <div class="btn-group btn-group-sm" role="group">
+                <button type="button" class="btn btn-success going">Going</button>
+                <button type="button" class="btn btn-danger notGoing">Not Going</button>
+                <button type="button" class="btn btn-info updateBtn"
+                data-toggle="modal"
+                data-target="#eventUpdate"
+                role="button"
+                id="updatebtn">Update</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card eventCard" style="max-width: 18rem;" id="id">
+          <img src="catparty1.jpg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">Grumpy Cat's Bday Bash</h5>
+            <h6>06/04/2019</h6>
+            <h6>09:00a</h6>
+            <h6>Cat Party</h6>
+            <h6>MusicCityCats</h6>
+            <a href="#" class="card-link">https://musiccitycats.com/</a>
+            <br />
+            <br />
+            <div class="card-footer">
+              <div class="btn-group btn-group-sm" role="group">
+                <button type="button" class="btn btn-success going">Going</button>
+                <button type="button" class="btn btn-danger notGoing">Not Going</button>
+                <button type="button" class="btn btn-info updateBtn"
+                data-toggle="modal"
+                data-target="#eventUpdate"
+                role="button"
+                id="updatebtn">Update</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br />
+      <br />
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+
+  <!-- Update Event Modal -->
+    <div class="modal" tabindex="-1" role="dialog" id="eventUpdate">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content" style="background-color:rgb(151, 198, 209);">
+            <div class="modal-header">
+              <h5 class="modal-title">Update My Event</h5>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="container">
+                <form>
+                  <div class="form-group">
+                    <label for="changeName"> Change Event Name</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="changeEname"
+                      placeholder="Your Event Name"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="changeEdate"
+                      >Change Event Date (xx/xx/xx)</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="changeEdate"
+                      placeholder="xx/xx/xx"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="changeEtime">
+                      Change Event Time (xx:xx am or pm)</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="changeEtime"
+                      placeholder="xx:xx am or pm"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="inputAddress2"
+                      >Change Event Address Link (check the links tab)</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="inputAddress2"
+                      placeholder="https://fancydogpark.com"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="inputAddress">Change Event Address</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="inputAddress"
+                      placeholder="1234 Main St, City, State"
+                    />
+                  </div>
+                  <br />
+                  <button type="submit" class="btn btn-primary" id="updateEvent">
+                    Update Event
+                  </button>
+                  <br />
+                  <br />
+                  <button type="submit" class="btn btn-primary" id="deleteEvent">
+                    Delete Event
+                  </button>
+                  <br />
+                  <br />
+                </form>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <!--  My Events Boards -->
+    <div
+      class="container"
+      id="myEvents"
+      style="background-color:rgb(151, 198, 209);"
+    >
+      <br />
+      <br />
+      <br />
+      <br />
+      <h2>My Events</h2>
+      <hr class="my-4" />
+      <div class="card-columns" id="myEvent">
+             
+      </div>
+      <br />
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~EVENT HTML~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~NEW MEMBER HTML~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+    <!-- New Member Form -->
+    <div
+      class="container"
+      id="newMembers"
+      style="background-color:rgb(151, 198, 209);"
+    >
+      <br />
+      <br />
+      <br />
+      <br />
+      <h2>New to Pet Party?</h2>
+      <hr class="my-4" />
+      <form class="was-validated">
+        <div class="form-group">
+          <label for="validationInput">Create User Name</label>
+          <input
+          type="text"
+            class="form-control is-invalid" 
+            id="uName"
+            placeholder="Create User Name"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="validationInput">Add User Email</label>
+          <input
+          type="text"
+            class="form-control is-invalid"
+            id="uEmail"
+            placeholder="name@example.com"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="validationInput">Add a Photo link</label>
+          <input
+          type="text"
+            class="form-control is-invalid"
+            id="uPhoto"
+            placeholder="Add a Photo Link"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="validationInput">Type of Pet</label>
+          <select class="custom-select" required id="petType">
+            <option value="">click to open pet type menu..</option>
+            <option value="dog">Dog</option>
+            <option value="cat">Cat</option>
+            <option value="bird">Bird</option>
+            <option value="fish">Fish</option>
+            <option value="reptile">Reptile</option>
+            <option value="multipet">I Live on an Ark</option>
+          </select>
+        </div>
+        <br />
+        <div class="form-group">
+          <label for="validationInput">Pet Names (limit 3)</label>
+          <input
+          type="text"
+          class="form-control is-invalid user"
+          id="uPets"
+          placeholder="PetName1, PetName2, Petname3"
+          required
+          ></input>
+        </div>
+        <p>*keep your username and email address available to sign in.</p>
+      <br />
+      <button type="submit" class="btn btn-primary" id="addUser">Add Me</button>
+      <br />
+    </form>
+      <br />
+      <br />
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~NEW MEMBER HTML~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~NEW EVENT HTML~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+    <!-- create event form -->
+    <div
+      class="container"
+      id="eventCreate"
+      style="background-color:rgb(151, 198, 209);"
+    >
+      <br />
+      <br />
+      <br />
+      <br />
+      <h2>Create a New Event</h2>
+      <hr class="my-4" />
+      <form class="was-validated">
+        <div class="form-group">
+          <label for="validationInput">Event Name</label>
+          <input
+            type="text"
+            class="form-control is-invalid"
+            id="eName"
+            placeholder="Your Event Name"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="validationInput">Event Date (xx/xx/xx)</label>
+          <input
+            type="text"
+            class="form-control is-invalid"
+            id="eDate"
+            placeholder="xx/xx/xx"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="validationInput">Event Time (xx:xx am or pm)</label>
+          <input
+            type="text"
+            class="form-control is-invalid"
+            id="eTime"
+            placeholder="xx:xx am or pm"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="validationInput"
+            >Event Address Link (check the links tab)</label
+          >
+          <input
+            type="text"
+            class="form-control is-invalid"
+            id="eLink"
+            placeholder="https://fancydogpark.com"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="validationInput">Event Address</label>
+          <input
+            type="text"
+            class="form-control is-invalid"
+            id="eAdd"
+            placeholder="1234 Main St, City, State"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="validationInput">Host UserName</label>
+          <input
+            type="text"
+            class="form-control is-invalid"
+            id="hName"
+            placeholder="Your Name"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="validationInput">Party Type</label>
+          <select class="custom-select" required id="partyType">
+            <option value="">click to open party type menu..</option>
+            <option value="dog">Dog Party</option>
+            <option value="cat">Cat Party</option>
+            <option value="bird">Bird Party</option>
+            <option value="fish">Fish Party</option>
+            <option value="reptile">Reptile Party</option>
+            <option value="multipet">All Pets Pets</option>
+          </select>
+        </div>
+        <br />
+        <button type="submit" class="btn btn-primary" id="addEvent">Create Event</button>
+        <br />
+        <br />
+      </form>
+      <br />
+      <br />
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~NEW EVENT HTML~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ HEADER/STYLE/NAVBAR/LOGO BANNER/FOOTER MUST BE ON EACH HTML~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
  <!-- Footer -->
  <footer >
   <nav class="navbar fixed-bottom navbar footer" style="background-color: rgba(76, 175, 80, 0.9);">
