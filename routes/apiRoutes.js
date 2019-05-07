@@ -1,8 +1,8 @@
 var db = require("../models");
 
 module.exports = function(app) {
-  app.get("/", function(req, res) {
-    res.render("index");
+  app.get("/events", function(req, res) {
+    res.json(users);
   });
 
   // Get all users, include join
@@ -23,7 +23,7 @@ module.exports = function(app) {
 
   // Delete an example by id
   app.delete("/api/users/:id", function(req, res) {
-    db.Example.destroy({ where: { id: req.params.id } }).then(function(users) {
+    db.Users.destroy({ where: { id: req.params.id } }).then(function(users) {
       res.json(users);
     });
   });
