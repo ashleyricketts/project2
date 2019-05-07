@@ -1,7 +1,7 @@
 var db = require("../models");
 
 module.exports = function(app) {
-  app.get("/", function(req, res) {
+  app.get("/", function(req, res){
     res.render("index");
   });
 
@@ -14,7 +14,7 @@ module.exports = function(app) {
     });
   });
 
-  // Create a new user
+  // Create a new example
   app.post("/users", function(req, res) {
     db.Users.create(req.body).then(function(newUser) {
       res.json(newUser);
