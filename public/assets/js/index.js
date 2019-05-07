@@ -16,6 +16,16 @@ $(document).ready(function() {
     $("#profileUpdate").on("shown.bs.modal");
   });
 
+  //this move events cards from events div to myEvents div
+  $(".going").on("click", function() {
+    $("#id1").prependTo($("#myEvent"));
+  });
+  //this moves events from myEvents to Events
+  $(".notGoing").on("click", function() {
+    //this needs to move event cards from events div to Events div
+    $("#id1").prependTo($("#eventArea"));
+  });
+
   //loads eventData to eventCards @ #eventArea onload
   $.get("/api/events", function(eventData) {
     if (data.length !== 0) {
@@ -35,25 +45,15 @@ $(document).ready(function() {
     }
   });
 
-  //this move events cards from events div to myEvents div
-  $(".going").on("click", function() {
-    $("#id1").prependTo($("#myEvent"));
-  });
-  //this moves events from myEvents to Events
-  $(".notGoing").on("click", function() {
-    //this needs to move event cards from events div to Events div
-    $("#id1").prependTo($("#eventArea"));
-  });
-
   //this collects userData on click
   $("#addUser").on("click", function() {
     //userData
     var userData = {
-      name: $("#uName").val(),
-      photo: $("#uPhoto").val(),
+      user_name: $("#uName").val(),
+      user_photo: $("#uPhoto").val(),
       email: $("#uEmail").val(),
-      petNames: $("#uPets").val(),
-      petTypes: $("#petType").val()
+      pet_names: $("#uPets").val(),
+      pet_Types: $("#petType").val()
     };
     // sending userData to userTables
     $.ajax("/users", {
@@ -70,14 +70,13 @@ $(document).ready(function() {
   $("#addEvent").on("click", function() {
     //eventData
     var eventData = {
-      eventName: $("#eName").val(),
-      eventDate: $("#eDate").val(),
-      eventTime: $("#etime").val(),
-      eventAddress: $("#eAdd").val(),
-      addressLink: $("#eLink").val(),
-      partyType: $("#partyType").val(),
-      hostName: $("#hName").val(),
-      hostEmail: $("#hEmail").val()
+      title: $("#eName").val(),
+      date: $("#eDate").val(),
+      time: $("#etime").val(),
+      address: $("#eAdd").val(),
+      link: $("#eLink").val(),
+      pet_types: $("#partyType").val(),
+      host_name: $("#hName").val()
     };
     //sending eventData to eventTables
     $.ajax("/events", {
