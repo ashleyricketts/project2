@@ -1,6 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
   var Events = sequelize.define("Events", {
-    event_id: DataTypes.INTEGER,
     title: DataTypes.STRING,
     date: DataTypes.DATE,
     time: DataTypes.TIME,
@@ -13,9 +12,9 @@ module.exports = function(sequelize, DataTypes) {
   Events.associate = function(models) {
     //event should belong to a user
     Events.belongsTo(models.Users, {
-      foreignKey: {
-        allowNull: false
-      }
+      //foreignKey: {
+       // allowNull: false
+     // }
     });
   };
 
