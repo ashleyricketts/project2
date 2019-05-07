@@ -66,11 +66,19 @@
 
   #footer {
     background: rgba(76, 175, 80, 0.9);
+    
 }
 
-  #test {
-    display: -moz-inline-grid;
-  }
+.footer {
+  font-size: 1.5rem;
+  
+}
+
+.card {
+  background-color:darkseagreen;
+}
+
+ 
     </style>
   </head>
   <body>
@@ -79,9 +87,9 @@
     <!-- nav bar -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
       <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#home"
-          ><i class="fas fa-cat"></i> Pet Party <i class="fas fa-dog"></i
-        ></a>
+        <a class="navbar-brand js-scroll-trigger" href="#home" style="color:blue; font-size: 2rem;"
+          ><b><i class="fas fa-cat"></i> Pet Party <i class="fas fa-dog"></i
+        ></b></a>
         <button
           class="navbar-toggler navbar-toggler-right"
           type="button"
@@ -132,7 +140,8 @@
       </div>
     </nav>
     <!-- logo Banner -->
-    <div class="container-fluid" id="home">
+    <br /> 
+       <div class="container-fluid" id="home">
       <div class="jumbotron">
         <img
           src="logo.jpg"
@@ -188,9 +197,9 @@
             <br />
             <div class="card-footer">
               <div class="btn-group btn-group-sm" role="group">
-                <button type="button" class="btn btn-outline-success going">Going</button>
-                <button type="button" class="btn btn-outline-danger notGoing">Not Going</button>
-                <button type="button" class="btn btn-outline-info updateBtn"
+                <button type="button" class="btn btn-success going">Going</button>
+                <button type="button" class="btn btn-danger notGoing">Not Going</button>
+                <button type="button" class="btn btn-info updateBtn"
                 data-toggle="modal"
                 data-target="#eventUpdate"
                 role="button"
@@ -214,9 +223,9 @@
             <br />
             <div class="card-footer">
               <div class="btn-group btn-group-sm" role="group">
-                <button type="button" class="btn btn-outline-success going">Going</button>
-                <button type="button" class="btn btn-outline-danger notGoing">Not Going</button>
-                <button type="button" class="btn btn-outline-info updateBtn"
+                <button type="button" class="btn btn-success going">Going</button>
+                <button type="button" class="btn btn-danger notGoing">Not Going</button>
+                <button type="button" class="btn btn-info updateBtn"
                 data-toggle="modal"
                 data-target="#eventUpdate"
                 role="button"
@@ -238,9 +247,9 @@
             <br />
             <div class="card-footer">
               <div class="btn-group btn-group-sm" role="group">
-                <button type="button" class="btn btn-outline-success going">Going</button>
-                <button type="button" class="btn btn-outline-danger notGoing">Not Going</button>
-                <button type="button" class="btn btn-outline-info updateBtn"
+                <button type="button" class="btn btn-success going">Going</button>
+                <button type="button" class="btn btn-danger notGoing">Not Going</button>
+                <button type="button" class="btn btn-info updateBtn"
                 data-toggle="modal"
                 data-target="#eventUpdate"
                 role="button"
@@ -552,7 +561,7 @@
             </button>
           </div>
           <div class="modal-body">
-            <img src="img/sampleUser.jpg" class="card-img-top" alt="..." />
+            <img src="sampleUser.jpg" class="card-img-top" alt="..." />
             <h5 class="card-title">Dog Dad Supreme</h5>
             <ul class="list-group list-group-flush">
               <li class="list-group-item">PetLoover@Example.com</li>
@@ -718,13 +727,15 @@
     </div>
  <!-- Footer -->
  <footer >
-  <nav class="navbar fixed-bottom navbar" style="background-color: rgba(76, 175, 80, 0.9);">
-      <a href="" class="text-muted"> </a>
-    <a href="https://www.bringfido.com/attraction/parks/city/nashville_tn_us/" target="_blank" class="text-muted"><i class="fas fa-paw"></i></a>
-    <a href="https://calendar.google.com/calendar/r?pli=1" target="_blank" class="text-muted"><i class="far fa-calendar-alt"></i></a>
-    <a href="https://weather.com/weather/tenday/l/Nashville+TN+USTN0357:1:US" target="_blank" class="text-muted">    <i class="fas fa-cloud-rain"></i></a>
-    <a href="https://www.google.com/maps/" target="_blank" class="text-muted">    <i class="fas fa-map-marker-alt"></i></a>
-    <a href="" class="text-muted"> </a>
+  <nav class="navbar fixed-bottom navbar footer" style="background-color: rgba(76, 175, 80, 0.9);">
+    <a href="" class="text"></a>
+    <a href="https://www.bringfido.com/attraction/parks/city/nashville_tn_us/" target="_blank" class="text"><i class="fas fa-paw"></i></a>
+    <a href="https://calendar.google.com/calendar/r?pli=1" target="_blank" class="text"><i class="far fa-calendar-alt"></i></a>
+    <a href="https://weather.com/weather/tenday/l/Nashville+TN+USTN0357:1:US" target="_blank" class="text">    <i class="fas fa-cloud-rain"></i></a>
+    <a href="https://www.google.com/maps/" target="_blank" class="text">    <i class="fas fa-map-marker-alt"></i></a>
+    <a href="https://www.catster.com/" target="_blank" class="text"><i class="fas fa-cat"></i></a>
+    <a href="" class="text"></a>
+
   </nav>
 </footer> 
 
