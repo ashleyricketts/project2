@@ -27,13 +27,14 @@ $(document).ready(function() {
   });
 
   //loads eventData to eventCards @ #eventArea onload
+  function postEvents() {
   $.get("/api/events", function(eventData) {
-    if (data.length !== 0) {
+    if (eventData.length !== 0) {
       for (var i = 0; i < eventData.length; i++) {
         //creates eventCard for each event from eventsTable
         var eventCard = $("<div>");
-        eventCard.addclass("card");
-        eventCard.addid(eventData[i].id);
+        eventCard.addClass("card");
+        eventCard.attr("id", eventData[i].id);
         eventCard.append("<h4>").text(eventData[i].name);
         eventCard.append("<h5>").text(eventData[i].date);
         eventCard.append("<h5>").text(eventData[i].time);
@@ -44,6 +45,7 @@ $(document).ready(function() {
       }
     }
   });
+};
 
   //this collects userData on click
   $("#addUser").on("click", function() {
@@ -60,10 +62,11 @@ $(document).ready(function() {
       type: "POST",
       data: userData
     }).then(function() {
-      //console.log("created new user");
+      console.log("created new user");
       console.log(userData);
       location.reload();
     });
+    
   });
 
   //this collects eventData on click
@@ -82,10 +85,12 @@ $(document).ready(function() {
     $.ajax("/events", {
       type: "POST",
       data: eventData
-    }).then(function() {
-      console.log(eventData);
-      location.reload();
-    });
+    }).//then(function() {
+      //console.log(eventData);
+      //postEvents();
+      //location.reload();
+    //});
+    then(postEvents);
   });
 
   //this updates userData

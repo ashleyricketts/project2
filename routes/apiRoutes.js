@@ -1,8 +1,14 @@
 var db = require("../models");
 
 module.exports = function(app) {
-  app.get("/events", function(req, res) {
-    res.json(users);
+
+  // get all the events
+  app.get("/api/events", function(req, res) {
+    db.Events.findAll({
+      include: [db.Users]
+    }).then(function(events) {
+      res.json(events);
+    });
   });
 
   // Get all users, include join
@@ -17,6 +23,14 @@ module.exports = function(app) {
   // Create a new user
   app.post("/users", function(req, res) {
     db.Users.create(req.body).then(function(newUser) {
+      res.json(newUser);
+    });
+  });
+
+  //create a new event
+
+  app.post("/events", function(req, res) {
+    db.Events.create(req.body).then(function(newUser) {
       res.json(newUser);
     });
   });
