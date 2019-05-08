@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<
 
 <head>
   <meta charset="UTF-8" />
@@ -11,94 +12,7 @@
 
   <link href="https://fonts.googleapis.com/css?family=Wendy+One" rel="stylesheet" />
 
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" />
 
-  <script src="https://code.jquery.com/jquery-3.4.0.min.js"
-    integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-    crossorigin="anonymous"></script>
-
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
-
-  <script type="text/javascript" src="index.js"></script>
-
-  <title>PET PARTY</title>
-
-  <style>
-    body {
-      min-height: 100vh;
-      background: url("grass.jpg");
-      background-repeat: no-repeat;
-      background-size: cover;
-      font-family: "Wendy One", sans-serif;
-    }
-
-    #mainNav {
-      background: rgba(76, 175, 80, 0.9);
-      /* Green background with 30% opacity */
-    }
-
-    .jumbotron {
-      background: none;
-    }
-
-    #footer {
-      background: rgba(76, 175, 80, 0.9);
-
-    }
-
-    .footer {
-      font-size: 1.5rem;
-
-    }
-
-    .card {
-      background-color: darkseagreen;
-    }
-  </style>
-</head>
-
-<body>
-  <br />
-  <br />
-  <!-- nav bar -->
-  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-    <div class="container">
-      <a class="navbar-brand js-scroll-trigger" href="#home" style="color:blue; font-size: 2rem;"><b><i
-            class="fas fa-cat"></i> Pet Party <i class="fas fa-dog"></i></b></a>
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
-        data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
-        aria-label="Toggle navigation">
-        Menu <i class="fas fa-bars"></i>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#eventCreate">Create Event</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#newMembers">New Members</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#Events">Events</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#myEvents">My Events</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="btn btn-info btn" data-toggle="modal" data-target="#profileModal" role="button" id="profile"><i
-                class="fas fa-user"></i></a>
-          </li>
-        </ul>
       </div>
     </div>
   </nav>
@@ -120,30 +34,7 @@
   <!-- Event Boards -->
   <div class="container" id="Events" style="background-color:rgb(151, 198, 209);">
     <br />
-    <br />
-    <br />
-    <h2>New Events</h2>
-    <hr class="my-4" />
-    <div class="card-columns text-center" id="eventArea">
-      <div class="card eventCard" style="max-width: 18rem;" id="id1">
-        <img src="dogparksall.jpg" class="card-img-top" alt="..." />
-        <div class="card-body">
-          <h5 class="card-title">BowWowWowathon</h5>
-          <h6>05/30/19</h6>
-          <h6>04:30p</h6>
-          <h6>Dog Party</h6>
-          <h6>DogDadSupreme</h6>
-          <h6>PetLoover@Example.com</h6>
-          <h6>PercyWarnerDogPark</h6>
-          <a href="" class="card-link">https://www.bringfido.com/attraction/3740?map=on</a>
-          <br />
-          <br />
-          <div class="card-footer">
-            <div class="btn-group btn-group-sm" role="group">
-              <button type="button" class="btn btn-success going">Going</button>
-              <button type="button" class="btn btn-danger notGoing">Not Going</button>
-              <button type="button" class="btn btn-info updateBtn" data-toggle="modal" data-target="#eventUpdate"
-                role="button" id="updatebtn">Update</button>
+
             </div>
           </div>
         </div>
@@ -210,13 +101,6 @@
     <br />
     <br />
     <br />
-    <h2>New to Pet Party?</h2>
-    <hr class="my-4" />
-    <form class="was-validated">
-      <div class="form-group">
-        <label for="validationInput">Create User Name</label>
-        <input type="text" class="form-control is-invalid" id="uName" placeholder="Create User Name" required />
-      </div>
 
       <div class="form-group">
         <label for="validationInput">Add User Email</label>
@@ -265,13 +149,7 @@
     <br />
     <br />
     <br />
-    <h2>Create a New Event</h2>
-    <hr class="my-4" />
-    <form class="was-validated">
-      <div class="form-group">
-        <label for="validationInput">Event Name</label>
-        <input type="text" class="form-control is-invalid" id="eName" placeholder="Your Event Name" required />
-      </div>
+
 
       <div class="form-group">
         <label for="validationInput">Event Date (xx/xx/xx)</label>
@@ -293,235 +171,12 @@
         <input type="text" class="form-control is-invalid" id="eAdd" placeholder="1234 Main St, City, State" required />
       </div>
 
-      <div class="form-group">
-        <label for="validationInput">Host UserName</label>
-        <input type="text" class="form-control is-invalid" id="hName" placeholder="Your Name" required />
-      </div>
-      <div class="form-group">
-        <label for="validationInput">Party Type</label>
-        <select class="custom-select" required id="partyType">
-          <option value="">click to open party type menu..</option>
-          <option value="dog">Dog Party</option>
-          <option value="cat">Cat Party</option>
-          <option value="bird">Bird Party</option>
-          <option value="fish">Fish Party</option>
-          <option value="reptile">Reptile Party</option>
-          <option value="multipet">All Pets Pets</option>
-        </select>
-      </div>
-      <br />
-      <button type="submit" class="btn btn-primary" id="addEvent">Create Event</button>
-      <br />
-      <br />
-    </form>
-    <br />
-    <br />
-  </div>
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <!--  My Events Boards -->
-  <div class="container" id="myEvents" style="background-color:rgb(151, 198, 209);">
-    <br />
-    <br />
-    <br />
-    <br />
-    <h2>My Events</h2>
-    <hr class="my-4" />
-    <div class="card-columns" id="myEvent">
 
-    </div>
     <br />
-  </div>
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <!-- Sign In Modal -->
-  <div class="modal" tabindex="-1" role="dialog" id="myModal">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content" style="background-color:rgb(151, 198, 209);">
-        <div class="modal-header">
-          <h5 class="modal-title">Welcome to the Pet Party</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <p>Sign In w/ Your Name and Email Address.</p>
-          <form>
-            <div class="form-row align-items-center">
-              <div class="col-auto">
-                <label class="sr-only" for="inlineFormInput">UserName</label>
-                <input type="text" class="form-control mb-2" id="inlineFormInput" placeholder="Dog Dad Supreme" />
-              </div>
-              <div class="col-auto">
-                <label class="sr-only" for="inlineFormInputGroup">Email Address</label>
-                <div class="input-group mb-2">
-                  <div class="input-group-prepend">
-                    <div class="input-group-text">
-                      <i class="fas fa-sign-in-alt"></i>
-                    </div>
-                  </div>
-                  <input type="text" class="form-control" id="inlineFormInputGroup"
-                    placeholder="PetLoover@Example.com" />
-                </div>
-              </div>
-            </div>
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">
-            Close
-          </button>
-          <button type="button" class="btn btn-primary" id="signIn">
-            Sign In
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Profile Modal -->
-  <div class="modal" tabindex="-1" role="dialog" id="profileModal">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content" style="background-color:rgb(151, 198, 209);">
-        <div class="modal-header">
-          <h5 class="modal-title">My Profile</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <img src="sampleUser.jpg" class="card-img-top" alt="..." />
-          <h5 class="card-title">Dog Dad Supreme</h5>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">PetLoover@Example.com</li>
-            <li class="list-group-item">Dog Parent</li>
-            <li class="list-group-item">
-              Capt BaDonkaDonk, Fuzzy Killer, Sid Vicious
-            </li>
-          </ul>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">
-              Close
-            </button>
-            <button data-toggle="modal" data-target="#profileUpdate" role="button" class="btn btn-primary"
-              id="updateUser">
-              Update
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Update Event Modal -->
-  <div class="modal" tabindex="-1" role="dialog" id="eventUpdate">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content" style="background-color:rgb(151, 198, 209);">
-        <div class="modal-header">
-          <h5 class="modal-title">Update My Event</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <div class="container">
-            <form>
-              <div class="form-group">
-                <label for="changeName"> Change Event Name</label>
-                <input type="text" class="form-control" id="changeEname" placeholder="Your Event Name" />
-              </div>
-              <div class="form-group">
-                <label for="changeEdate">Change Event Date (xx/xx/xx)</label>
-                <input type="text" class="form-control" id="changeEdate" placeholder="xx/xx/xx" />
-              </div>
-              <div class="form-group">
-                <label for="changeEtime">
-                  Change Event Time (xx:xx am or pm)</label>
-                <input type="text" class="form-control" id="changeEtime" placeholder="xx:xx am or pm" />
-              </div>
-              <div class="form-group">
-                <label for="inputAddress2">Change Event Address Link (check the links tab)</label>
-                <input type="text" class="form-control" id="inputAddress2" placeholder="https://fancydogpark.com" />
-              </div>
-              <div class="form-group">
-                <label for="inputAddress">Change Event Address</label>
-                <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St, City, State" />
-              </div>
-              <br />
-              <button type="submit" class="btn btn-primary" id="updateEvent">
-                Update Event
-              </button>
-              <br />
-              <br />
-              <button type="submit" class="btn btn-primary" id="deleteEvent">
-                Delete Event
-              </button>
-              <br />
-              <br />
-            </form>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">
-                Close
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Update User Modal -->
-  <div class="modal" tabindex="-1" role="dialog" id="profileUpdate">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content" style="background-color: rgba(76, 175, 80, 0.9);">
-        <div class="modal-header">
-          <h5 class="modal-title">Update Contact Info</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="container">
-          <form>
-            <div class="form-group">
-              <label for="uName">Udpate User Name</label>
-              <input type="text" class="form-control" id="uNameUP" placeholder="New Name">
-            </div>
-            <div class="form-group">
-              <label for="uEmail">Update User Email</label>
-              <input type="text" class="form-control" id="uEmailUP" placeholder="New Email">
-            </div>
-          </form>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">
-              Close
-            </button>
-            <button type="button" class="btn btn-primary" id="updateUser">
-              Change Info
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Footer -->
-  <footer>
-    <nav class="navbar fixed-bottom navbar footer" style="background-color: rgba(76, 175, 80, 0.9);">
-      <a href="" class="text"></a>
-      <a href="https://www.bringfido.com/attraction/parks/city/nashville_tn_us/" target="_blank" class="text"><i
-          class="fas fa-paw"></i></a>
-      <a href="https://calendar.google.com/calendar/r?pli=1" target="_blank" class="text"><i
-          class="far fa-calendar-alt"></i></a>
-      <a href="https://weather.com/weather/tenday/l/Nashville+TN+USTN0357:1:US" target="_blank" class="text"> <i
-          class="fas fa-cloud-rain"></i></a>
-      <a href="https://www.google.com/maps/" target="_blank" class="text"> <i class="fas fa-map-marker-alt"></i></a>
-      <a href="https://www.catster.com/" target="_blank" class="text"><i class="fas fa-cat"></i></a>
-      <a href="" class="text"></a>
+    <br />
+    <br />
+    <br />
+
 
     </nav>
   </footer>
