@@ -27,7 +27,7 @@ $(document).ready(function() {
   });
 
   //loads eventData to eventCards @ #eventArea onload
-  function postEvents() {
+  //function postEvents() {
   $.get("/api/events", function(eventData) {
     if (eventData.length !== 0) {
       for (var i = 0; i < eventData.length; i++) {
@@ -35,7 +35,7 @@ $(document).ready(function() {
         var eventCard = $("<div>");
         eventCard.addClass("card");
         eventCard.attr("id", eventData[i].id);
-        eventCard.append("<h4>").text(eventData[i].name);
+        eventCard.append("<h4>").text(eventData[i].title);
         eventCard.append("<h5>").text(eventData[i].date);
         eventCard.append("<h5>").text(eventData[i].time);
         eventCard.append("<h5>").text(eventData[i].address);
@@ -45,7 +45,7 @@ $(document).ready(function() {
       }
     }
   });
-};
+//};
 
   //this collects userData on click
   $("#addUser").on("click", function() {
@@ -85,12 +85,12 @@ $(document).ready(function() {
     $.ajax("/events", {
       type: "POST",
       data: eventData
-    }).//then(function() {
-      //console.log(eventData);
+    }).then(function(data) {
+      console.log(data);
       //postEvents();
-      //location.reload();
-    //});
-    then(postEvents);
+      window.location.href = "http://localhost:3500/"
+    });
+    //then(postEvents);
   });
 
   //this updates userData
