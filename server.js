@@ -5,7 +5,7 @@ var express = require("express");
 var db = require("./models");
 
 var app = express();
-var PORT = process.env.PORT || 3500;
+var PORT = process.env.PORT || 8500;
 
 // Middleware
 app.use(express.urlencoded({ extended: false }));
@@ -25,7 +25,7 @@ var syncOptions = { force: true };
 //}
 
 // Starting the server, syncing our models ------------------------------------/
-db.sequelize.sync({force: true}).then(function() {
+db.sequelize.sync({ force: true }).then(function() {
   app.listen(PORT, function() {
     console.log(
       "==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.",
