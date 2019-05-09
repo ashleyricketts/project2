@@ -1,7 +1,7 @@
 {
-  "name": "node-handlebars-boilerplate",
+  "name": "mysql-sequilize-heroku",
   "version": "1.0.0",
-  "description": "Project 2 Starter",
+  "description": "Project 2",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
@@ -9,6 +9,7 @@
     "fix": "eslint --fix .",
     "test": "npm run lint && cross-env NODE_ENV=test mocha -u tdd --reporter spec --exit"
   },
+  "authors": "Ashley, Bosco, Andy",
   "license": "ISC",
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",

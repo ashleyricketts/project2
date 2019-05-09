@@ -28,24 +28,24 @@ $(document).ready(function() {
 
   //loads eventData to eventCards @ #eventArea onload
   //function postEvents() {
-  $.get("/api/events", function(eventData) {
-    if (eventData.length !== 0) {
-      for (var i = 0; i < eventData.length; i++) {
+  $.get("/api/events", function(events) {
+    if (events.length !== 0) {
+      for (var i = 0; i < events.length; i++) {
         //creates eventCard for each event from eventsTable
         var eventCard = $("<div>");
         eventCard.addClass("card");
-        eventCard.attr("id", eventData[i].id);
-        eventCard.append("<h4>").text(eventData[i].title);
-        eventCard.append("<h5>").text(eventData[i].date);
-        eventCard.append("<h5>").text(eventData[i].time);
-        eventCard.append("<h5>").text(eventData[i].address);
-        eventCard.append("<a>").attr("href=" + "'" + eventData[i].link + "'");
+        eventCard.attr("id", events[i].id);
+        eventCard.append("<h4>" + events[i].title + "</h4");
+        eventCard.append("<h5>" + events[i].date + "</h5>");
+        eventCard.append("<h5>" + events[i].time + "</h5>");
+        eventCard.append("<h5>" + events[i].address + "</h5>");
+        eventCard.append("<a>" + events[i].link + "</a>");
         //adds events to div
         $("#eventArea").prepend(eventCard);
       }
     }
   });
-//};
+  //};
 
   //this collects userData on click
   $("#addUser").on("click", function() {
@@ -66,7 +66,6 @@ $(document).ready(function() {
       console.log(userData);
       location.reload();
     });
-    
   });
 
   //this collects eventData on click
@@ -88,7 +87,7 @@ $(document).ready(function() {
     }).then(function(data) {
       console.log(data);
       //postEvents();
-      window.location.href = "http://localhost:3500/"
+      window.location.href = "http://localhost:3500/";
     });
     //then(postEvents);
   });
@@ -125,9 +124,13 @@ $(document).ready(function() {
     });
   });
 
+<<<<<<< HEAD
   
 
   // onClick #signIn validates email then populates profileData & myEvents
+=======
+  // //onClick #signIn validates email then populates profileData & myEvents
+>>>>>>> 4e5a6927e2e78ce119a23ceff73e86a4e6d491de
   // $("#signIn").on("click", function() {
   //   //function using username & email find define userName.ID accessing userData emailAddress.id accesing eventData
   //   var userSignin = userData.name.val();
@@ -138,7 +141,6 @@ $(document).ready(function() {
   //       userSignin === userData[i].name &&
   //       emailSignin === userData[i].email
   //     ) {
-  //       console.log(userSignin, emailSignin);
   //       loadMyData();
   //     } else {
   //       console.log("Please Check your info or create a member profile");
@@ -146,7 +148,7 @@ $(document).ready(function() {
   //   }
   //   function loadMyData() {
   //     //this populates data in profile modal
-  //     $.ajax(currentURL + "/api/", userData, function(data) {
+  //     $.ajax(currentURL + "/api/", userData, function(userData) {
   //       $("#userName").text(userData.name);
   //       $("#userPhoto").attr("src", userData.photo);
   //       $("#userEmail").text(userData.email);

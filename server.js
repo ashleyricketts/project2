@@ -5,14 +5,13 @@ var express = require("express");
 var db = require("./models");
 
 
+
 //dependencies for login
 var session    = require('express-session')
 var bodyParser = require('body-parser')
 var passport   = require('passport')
 
 var PORT = process.env.PORT || 3500;
-
-
 var app = express();
 // Middleware
 app.use(express.urlencoded({ extended: false }));
@@ -42,7 +41,7 @@ var syncOptions = { force: true };
 //}
 
 // Starting the server, syncing our models ------------------------------------/
-db.sequelize.sync({force: true}).then(function() {
+db.sequelize.sync({ force: true }).then(function() {
   app.listen(PORT, function() {
     console.log(
       "==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.",
