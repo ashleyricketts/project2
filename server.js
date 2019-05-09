@@ -4,13 +4,30 @@ var express = require("express");
 
 var db = require("./models");
 
-var app = express();
+
+//dependencies for login
+var session    = require('express-session')
+var bodyParser = require('body-parser')
+var passport   = require('passport')
+
 var PORT = process.env.PORT || 3500;
 
+
+var app = express();
 // Middleware
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(express.static("public"));
+
+//For BodyParser
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
+// For Passport
+ 
+app.use(session({ secret: 'keyboard cat',resave: true, saveUninitialized: true})); // session secret
+app.use(passport.initialize());
+app.use(passport.session()); // persistent login sessions
 
 // Routes
 require("./routes/apiRoutes")(app);
