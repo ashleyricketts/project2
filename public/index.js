@@ -125,6 +125,8 @@ $(document).ready(function() {
     });
   });
 
+  
+
   // onClick #signIn validates email then populates profileData & myEvents
   // $("#signIn").on("click", function() {
   //   //function using username & email find define userName.ID accessing userData emailAddress.id accesing eventData
