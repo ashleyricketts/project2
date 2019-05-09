@@ -124,7 +124,13 @@ $(document).ready(function() {
     });
   });
 
+<<<<<<< HEAD
+  
+
+  // onClick #signIn validates email then populates profileData & myEvents
+=======
   // //onClick #signIn validates email then populates profileData & myEvents
+>>>>>>> 4e5a6927e2e78ce119a23ceff73e86a4e6d491de
   // $("#signIn").on("click", function() {
   //   //function using username & email find define userName.ID accessing userData emailAddress.id accesing eventData
   //   var userSignin = userData.name.val();
