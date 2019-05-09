@@ -13,8 +13,8 @@ module.exports = function(sequelize, DataTypes) {
     //event should belong to a user
     Events.belongsTo(models.Users, {
       //foreignKey: {
-       // allowNull: false
-     // }
+      // allowNull: false
+      // }
     });
   };
 
