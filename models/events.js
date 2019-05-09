@@ -1,8 +1,8 @@
 module.exports = function(sequelize, DataTypes) {
   var Events = sequelize.define("Events", {
     title: DataTypes.STRING,
-    date: DataTypes.DATE,
-    time: DataTypes.TIME,
+    date: DataTypes.STRING,
+    time: DataTypes.STRING,
     link: DataTypes.TEXT,
     address: DataTypes.STRING,
     pet_types: DataTypes.STRING,
