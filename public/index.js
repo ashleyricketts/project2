@@ -26,6 +26,7 @@ $(document).ready(function() {
     $("#id1").prependTo($("#eventArea"));
   });
 
+  //NEEDS EDIT (formatting on page)
   //loads eventData to eventCards @ #eventArea onload
   //function postEvents() {
   $.get("/api/events", function(events) {
@@ -47,29 +48,37 @@ $(document).ready(function() {
   });
   //};
 
-  //this collects userData on click
-  $("#addUser").on("click", function() {
-    //userData
-    var userData = {
-      user_name: $("#uName").val(),
-      user_photo: $("#uPhoto").val(),
-      email: $("#uEmail").val(),
-      pet_names: $("#uPets").val(),
-      pet_Types: $("#petType").val()
-    };
-    // sending userData to userTables
-    $.ajax("/users", {
-      type: "POST",
-      data: userData
-    }).then(function() {
-      console.log("created new user");
-      console.log(userData);
-      location.reload();
-    });
-  });
+  //commented out because of login system 
+  // //this collects userData on click
+  // $("#addUser").on("click", function() {
+  //   //userData
+  //   var userData = {
+  //     user_name: $("#uName").val(),
+  //     user_photo: $("#uPhoto").val(),
+  //     email: $("#uEmail").val(),
+  //     pet_names: $("#uPets").val(),
+  //     pet_Types: $("#petType").val()
+  //   };
+  //   // sending userData to userTables
+  //   $.ajax("/users", {
+  //     type: "POST",
+  //     data: userData
+  //   }).then(function() {
+  //     console.log("created new user");
+  //     console.log(userData);
+  //     location.reload();
+  //   });
+  // });
+  // function getEvents() {
+  //   $.get("/api/events", function(data){
+  //     events = data;
+  //   });
+  // }
 
-  //this collects eventData on click
-  $("#addEvent").on("click", function() {
+
+  //this collects eventData on click **WORKS!
+  $("#addEvent").on("click", function(event) {
+    event.preventDefault();
     //eventData
     var eventData = {
       title: $("#eName").val(),
@@ -81,15 +90,8 @@ $(document).ready(function() {
       host_name: $("#hName").val()
     };
     //sending eventData to eventTables
-    $.ajax("/events", {
-      type: "POST",
-      data: eventData
-    }).then(function(data) {
-      console.log(data);
-      //postEvents();
-      window.location.href = "http://localhost:3500/";
-    });
-    //then(postEvents);
+    $.post("/events", eventData, getEvents);
+    console.log(eventData);
   });
 
   //this updates userData
@@ -114,7 +116,7 @@ $(document).ready(function() {
     });
   });
 
-  //this deletes eventData
+  //this deletes eventData **needs button? 
   $("#deleteEvent").on("click", function(id) {
     $.ajax({
       method: "DELETE",
@@ -124,7 +126,78 @@ $(document).ready(function() {
     });
   });
 
+  //for sign in **connected with HTML
+   // When the form is submitted, we validate there's an email and password entered
+   $("form.login").on("submit", function(event) {
+    event.preventDefault();
+    var emailInput = $("input#inlineFormInputGroup");
+    var passwordInput = $("input#inlineFormInput");
+    var userData = {
+      email: emailInput.val().trim(),
+      password: passwordInput.val().trim()
+    };
   
+
+    if (!userData.email || !userData.password) {
+      return;
+    }
+    // If we have an email and password we run the loginUser function and clear the form
+    loginUser(userData.email, userData.password);
+    emailInput.val("");
+    passwordInput.val("");
+  });
+
+  // loginUser does a post to our "api/login" route and if successful, redirects us the the members page
+  function loginUser(email, password) {
+    $.post("/api/login", {
+      email: email,
+      password: password
+    }).then(function(data) {
+      window.location.replace(data);
+      // If there's an error, log the error
+    }).catch(function(err) {
+      console.log(err);
+    });
+  }
+
+  //create user **connected with HTML
+  // When the new member button is clicked, we validate the email and password are not blank
+  $("form.signup").on("submit", function(event) {
+    event.preventDefault();
+    var emailInput = $("input#uEmail");
+    var passwordInput = $("input#uPassword");
+    var userData = {
+      email: emailInput.val().trim(),
+      password: passwordInput.val().trim()
+    };
+
+    if (!userData.email || !userData.password) {
+      return;
+    }
+    console.log(userData);
+    // If we have an email and password, run the signUpUser function
+    signUpUser(userData.email, userData.password);
+    emailInput.val("");
+    passwordInput.val("");
+  });
+
+  // Does a post to the signup route. If succesful, we are redirected to the members page
+  // Otherwise we log any errors
+  function signUpUser(email, password) {
+    $.post("/api/signup", {
+      email: email,
+      password: password
+    }).then(function(data) {
+      window.location.replace(data);
+      // If there's an error, handle it by throwing up a boostrap alert
+    }).catch(handleLoginErr);
+  }
+
+  function handleLoginErr(err) {
+    $("#alert .msg").text(err.responseJSON);
+    $("#alert").fadeIn(500);
+  }
+
 
   // onClick #signIn validates email then populates profileData & myEvents
   // $("#signIn").on("click", function() {
