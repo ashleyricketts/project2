@@ -87,12 +87,17 @@
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
           0 6px 20px 0 rgba(0, 0, 0, 0.19);
         text-shadow: 0 0 2px white;
+        max-width: 18rem;
       }
 
       .text {
         color: blue;
         font-size: 1.5rem;
         text-shadow: 0 0 2px white;
+      }
+
+      #eventArea {
+        justify-content: space-evenly;
       }
     </style>
   </head>
@@ -133,7 +138,7 @@
 
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#newMembers"
-                >New Members</a
+                >Register</a
               >
             </li>
 
@@ -209,35 +214,27 @@
             </button>
           </div>
           <div class="modal-body">
-            <p>Log in with your email and password.</p>
+            <p>Sign in with your email and password.</p>
             <form class="login">
-              <div class="form-row align-items-center">
-                <div class="col-auto">
-                  <label class="sr-only" for="inlineFormInputGroup"
-                    >Email Address</label
-                  >
-                  <div class="input-group mb-2">
-                    <div class="input-group-prepend">
-                      <div class="input-group-text">
-                        <i class="fas fa-sign-in-alt"></i>
-                      </div>
-                    </div>
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="inlineFormInputGroup"
-                      placeholder="PetLoover@Example.com"
+              <div class="form-group">
+                <label for="validationInput">User Email</label>
+                <input
+                  type="text"
+                  class="form-control is-invalid"
+                  id="Email"
+                  placeholder="name@example.com"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="validationInput">Password</label>
+                <input
+                  type="password"
+                  class="form-control is-invalid"
+                  id="Password"
+                  required
                     />
                   </div>
-                </div>
-                <div class="col-auto">
-                  <label class="sr-only" for="inlineFormInput">Password</label>
-                  <input
-                    type="password"
-                    class="form-control mb-2"
-                    id="inlineFormInput"
-                  />
-                </div>
               </div>
               <div class="modal-footer">
                 <button
@@ -377,7 +374,7 @@
       <h2>Events</h2>
       <hr class="my-4" />
       <div class="card-columns" id="eventArea">
-        <div class="card eventCard" style="max-width: 18rem;" id="id">
+        <div class="card eventCard" id="id">
           <h5 class="card-title">BowWowWowathon</h5>
           <h6>05/30/19</h6>
           <h6>04:30p</h6>
@@ -406,7 +403,7 @@
           </button>
           <hr />
         </div>
-        <div class="card eventCard" style="max-width: 18rem;" id="id">
+        <div class="card eventCard" id="id">
           <h5 class="card-title">Lizard Lounge</h5>
           <h6>07/05/73</h6>
           <h6>06:30pm</h6>
@@ -435,7 +432,7 @@
           </button>
           <hr />
         </div>
-        <div class="card eventCard" style="max-width: 18rem;" id="id">
+        <div class="card eventCard" id="id">
           <h5 class="card-title">Grumpy Cat's Bday Bash</h5>
           <h6>06/04/2019</h6>
           <h6>09:00a</h6>

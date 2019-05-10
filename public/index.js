@@ -18,13 +18,15 @@ $(document).ready(function() {
 
   //this move events cards from events div to myEvents div
   $(".going").on("click", function() {
-    $("#id1").prependTo($("#myEvent"));
+    $(this).hide(this);
+    $(".notGoing").on("click", function() {
+      $(".going").show(this);
+    });
   });
   //this moves events from myEvents to Events
-  $(".notGoing").on("click", function() {
-    //this needs to move event cards from events div to Events div
-    $("#id1").prependTo($("#eventArea"));
-  });
+  // $(".notGoing").on("click", function() {
+  //   $(".going").show();
+  // });
 
   //NEEDS EDIT (formatting on page)
   //loads eventData to eventCards @ #eventArea onload
@@ -51,7 +53,7 @@ $(document).ready(function() {
             "</button>"
         );
         eventCard.append(
-          "<button type='button' class='btn btn-danger btn-sm not going'>" +
+          "<button type='button' class='btn btn-danger btn-sm notGoing'>" +
             "NO" +
             "</button>"
         );
