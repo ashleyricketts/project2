@@ -138,7 +138,7 @@
 
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#newMembers"
-                >New Members</a
+                >Register</a
               >
             </li>
 
@@ -214,35 +214,27 @@
             </button>
           </div>
           <div class="modal-body">
-            <p>Log in with your email and password.</p>
+            <p>Sign in with your email and password.</p>
             <form class="login">
-              <div class="form-row align-items-center">
-                <div class="col-auto">
-                  <label class="sr-only" for="inlineFormInputGroup"
-                    >Email Address</label
-                  >
-                  <div class="input-group mb-2">
-                    <div class="input-group-prepend">
-                      <div class="input-group-text">
-                        <i class="fas fa-sign-in-alt"></i>
-                      </div>
-                    </div>
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="inlineFormInputGroup"
-                      placeholder="PetLoover@Example.com"
+              <div class="form-group">
+                <label for="validationInput">User Email</label>
+                <input
+                  type="text"
+                  class="form-control is-invalid"
+                  id="Email"
+                  placeholder="name@example.com"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="validationInput">Password</label>
+                <input
+                  type="password"
+                  class="form-control is-invalid"
+                  id="Password"
+                  required
                     />
                   </div>
-                </div>
-                <div class="col-auto">
-                  <label class="sr-only" for="inlineFormInput">Password</label>
-                  <input
-                    type="password"
-                    class="form-control mb-2"
-                    id="inlineFormInput"
-                  />
-                </div>
               </div>
               <div class="modal-footer">
                 <button
