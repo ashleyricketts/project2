@@ -3,7 +3,7 @@ var passport = require("../config/passport");
 
 module.exports = function(app) {
 
-  // get all the events
+  // get all the events **this route works! 
   app.get("/api/events", function(req, res) {
     db.Events.findAll({
       include: [db.Users]
@@ -12,37 +12,57 @@ module.exports = function(app) {
     });
   });
 
+
+
+  //might not be useful, better to list events in order to keep login simple ?
   // Get all users, include join
-  app.get("/api/users", function(req, res) {
-    db.Users.findAll({
-      include: [db.Events]
-    }).then(function(users) {
-      res.json(users);
-    });
-  });
+  // app.get("/api/users", function(req, res) {
+  //   db.newUsers.findAll({
+  //     // include: [db.Events]
+  //   }).then(function(newUsers) {
+  //     res.json(newUsers);
+  //   });
+  // });
 
-  // Create a new user
-  app.post("/users", function(req, res) {
-    db.Users.create(req.body).then(function(newUser) {
-      res.json(newUser);
-    });
-  });
 
-  //create a new event
 
+
+  // Create a new user **using login instead
+  // app.post("/users", function(req, res) {
+  //   db.newUsers.create(req.body).then(function(newUser) {
+  //     res.json(newUser);
+  //   });
+  // });
+
+
+  //create a new event **this works
   app.post("/events", function(req, res) {
-    db.Events.create(req.body).then(function(newUser) {
-      res.json(newUser);
+    console.log(req.body);
+    db.Events.create({
+    title: req.body.title,
+    date: req.body.date,
+    time: req.body.time,
+    link: req.body.link,
+    address: req.body.address,
+    pet_types: req.body.pet_types,
+    host_name: req.body.host_name
+    }).then(function(dbEvents) {
+      res.json(dbEvents);
     });
   });
 
-  // Delete an example by id
-  app.delete("/api/users/:id", function(req, res) {
-    db.Users.destroy({ where: { id: req.params.id } }).then(function(users) {
-      res.json(users);
-    });
-  });
 
+
+  //not working, is it needed? 
+  // // Delete an example by id 
+  // app.delete("/api/users/:id", function(req, res) {
+  //   db.Users.destroy({ where: { id: req.params.id } }).then(function(users) {
+  //     res.json(users);
+  //   });
+  // });
+
+
+//Need to work on this part below with routing login... (ashley)
    // Using the passport.authenticate middleware with our local strategy.
   // If the user has valid login credentials, send them to the members page.
   // Otherwise the user will be sent an error
