@@ -36,11 +36,31 @@ $(document).ready(function() {
         var eventCard = $("<div>");
         eventCard.addClass("card");
         eventCard.attr("id", events[i].id);
-        eventCard.append("<h4>" + events[i].title + "</h4");
-        eventCard.append("<h5>" + events[i].date + "</h5>");
-        eventCard.append("<h5>" + events[i].time + "</h5>");
-        eventCard.append("<h5>" + events[i].address + "</h5>");
-        eventCard.append("<a>" + events[i].link + "</a>");
+        eventCard.append("<h5 class='card-title'>" + events[i].title + "</h5");
+        eventCard.append("<h6>" + events[i].date + "</h6>");
+        eventCard.append("<h6>" + events[i].time + "</h6>");
+        eventCard.append("<h6>" + events[i].pet_types + "</h6>");
+        eventCard.append("<h6>" + events[i].address + "</h6>");
+        eventCard.append(
+          "<a href='#' class='card-link'>" + events[i].link + "</a>"
+        );
+        eventCard.append("<hr class='my-4'>");
+        eventCard.append(
+          "<button type='button' class='btn btn-success btn-sm going'>" +
+            "GO" +
+            "</button>"
+        );
+        eventCard.append(
+          "<button type='button' class='btn btn-danger btn-sm not going'>" +
+            "NO" +
+            "</button>"
+        );
+        eventCard.append(
+          "<button class='btn btn-warning btn-sm updateBtn'data-toggle='modal'data-target='#eventUpdate'role='button'id='updatebtn'>" +
+            "Update" +
+            "</button>"
+        );
+        eventCard.append("<hr class='my-4'>");
         //adds events to div
         $("#eventArea").prepend(eventCard);
       }
@@ -48,7 +68,7 @@ $(document).ready(function() {
   });
   //};
 
-  //commented out because of login system 
+  //commented out because of login system
   // //this collects userData on click
   // $("#addUser").on("click", function() {
   //   //userData
@@ -69,12 +89,12 @@ $(document).ready(function() {
   //     location.reload();
   //   });
   // });
-  // function getEvents() {
-  //   $.get("/api/events", function(data){
-  //     events = data;
-  //   });
-  // }
-
+  function getEvents() {
+    $.get("/api/events", function(data) {
+      events = data;
+    });
+    location.reload();
+  }
 
   //this collects eventData on click **WORKS!
   $("#addEvent").on("click", function(event) {
@@ -116,7 +136,7 @@ $(document).ready(function() {
     });
   });
 
-  //this deletes eventData **needs button? 
+  //this deletes eventData **needs button?
   $("#deleteEvent").on("click", function(id) {
     $.ajax({
       method: "DELETE",
@@ -127,8 +147,8 @@ $(document).ready(function() {
   });
 
   //for sign in **connected with HTML
-   // When the form is submitted, we validate there's an email and password entered
-   $("form.login").on("submit", function(event) {
+  // When the form is submitted, we validate there's an email and password entered
+  $("form.login").on("submit", function(event) {
     event.preventDefault();
     var emailInput = $("input#inlineFormInputGroup");
     var passwordInput = $("input#inlineFormInput");
@@ -136,7 +156,6 @@ $(document).ready(function() {
       email: emailInput.val().trim(),
       password: passwordInput.val().trim()
     };
-  
 
     if (!userData.email || !userData.password) {
       return;
@@ -152,12 +171,14 @@ $(document).ready(function() {
     $.post("/api/login", {
       email: email,
       password: password
-    }).then(function(data) {
-      window.location.replace(data);
-      // If there's an error, log the error
-    }).catch(function(err) {
-      console.log(err);
-    });
+    })
+      .then(function(data) {
+        window.location.replace(data);
+        // If there's an error, log the error
+      })
+      .catch(function(err) {
+        console.log(err);
+      });
   }
 
   //create user **connected with HTML
@@ -187,17 +208,18 @@ $(document).ready(function() {
     $.post("/api/signup", {
       email: email,
       password: password
-    }).then(function(data) {
-      window.location.replace(data);
-      // If there's an error, handle it by throwing up a boostrap alert
-    }).catch(handleLoginErr);
+    })
+      .then(function(data) {
+        window.location.replace(data);
+        // If there's an error, handle it by throwing up a boostrap alert
+      })
+      .catch(handleLoginErr);
   }
 
   function handleLoginErr(err) {
     $("#alert .msg").text(err.responseJSON);
     $("#alert").fadeIn(500);
   }
-
 
   // onClick #signIn validates email then populates profileData & myEvents
   // $("#signIn").on("click", function() {
