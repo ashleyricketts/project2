@@ -36,11 +36,16 @@
       background-repeat: no-repeat;
       background-size: cover;
       font-family: "Wendy One", sans-serif;
+      text-shadow: 0 0 2px white;
     }
 
     #mainNav {
-      background: rgba(76, 175, 80, 0.9);
+      background: rgba(76,
+        175,
+        80,
+        0.9);
       /* Green background with 30% opacity */
+      text-shadow: 0 0 2px white;
     }
 
     .jumbotron {
@@ -49,16 +54,32 @@
 
     #footer {
       background: rgba(76, 175, 80, 0.9);
-
     }
 
     .footer {
       font-size: 1.5rem;
-
     }
 
     .card {
-      background-color: darkseagreen;
+      /* background-color:darkseagreen; */
+      background: url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/Vm8N8ry5eikbknln4/pets-on-a-white-background_bgzbv5pp-l_thumbnail-full01.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding: 5%;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      text-shadow: 0 0 2px white;
+      max-width: 18rem;
+    }
+
+    .text {
+      color: blue;
+      font-size: 1.5rem;
+      text-shadow: 0 0 2px white;
+    }
+
+    #eventArea {
+      justify-content: space-evenly;
     }
   </style>
 </head>
@@ -78,7 +99,6 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
-
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#Events">Events</a>
           </li>
@@ -88,7 +108,7 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#newMembers">New Members</a>
+            <a class="nav-link js-scroll-trigger" href="#newMembers">Register</a>
           </li>
 
           <!-- <li class="nav-item">
@@ -136,41 +156,30 @@
           </button>
         </div>
         <div class="modal-body">
-          <p>Log in with your email and password.</p>
+          <p>Sign in with your email and password.</p>
           <form class="login">
-            <div class="form-row align-items-center">
-              <div class="col-auto">
-                <label class="sr-only" for="inlineFormInputGroup">Email Address</label>
-                <div class="input-group mb-2">
-                  <div class="input-group-prepend">
-                    <div class="input-group-text">
-                      <i class="fas fa-sign-in-alt"></i>
-                    </div>
-                  </div>
-                  <input type="text" class="form-control" id="inlineFormInputGroup"
-                    placeholder="PetLoover@Example.com" />
-                </div>
-              </div>
-              <div class="col-auto">
-                <label class="sr-only" for="inlineFormInput">Password</label>
-                <input type="password" class="form-control mb-2" id="inlineFormInput" />
-              </div>
+            <div class="form-group">
+              <label for="validationInput">User Email</label>
+              <input type="text" class="form-control is-invalid" id="uEmail" placeholder="name@example.com" required />
             </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">
-                Close
-              </button>
-              <button type="submit" class="btn btn-primary" id="submit">
-                Sign In
-              </button>
+            <div class="form-group">
+              <label for="validationInput">Password</label>
+              <input type="password" class="form-control is-invalid" id="uPassword" required />
             </div>
-          </form>
         </div>
-
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">
+            Close
+          </button>
+          <button type="submit" class="btn btn-primary" id="submit">
+            Sign In
+          </button>
+        </div>
+        </form>
       </div>
     </div>
   </div>
-
+  </div>
 
   <!-- Profile Modal -->
   <div class="modal" tabindex="-1" role="dialog" id="profileModal">
@@ -220,11 +229,11 @@
           <form>
             <div class="form-group">
               <label for="uName">Udpate User Name</label>
-              <input type="text" class="form-control" id="uNameUP" placeholder="New Name">
+              <input type="text" class="form-control" id="uNameUP" placeholder="New Name" />
             </div>
             <div class="form-group">
               <label for="uEmail">Update User Email</label>
-              <input type="text" class="form-control" id="uEmailUP" placeholder="New Email">
+              <input type="text" class="form-control" id="uEmailUP" placeholder="New Email" />
             </div>
           </form>
           <div class="modal-footer">
@@ -241,85 +250,82 @@
   </div>
   <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SIGN IN/ USER UPDATE HTML~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-
   <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~EVENT HTML~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
   <!-- EventsArea -->
   <br />
   <br />
+  <br>
+  <br>
   <div class="container" id="Events" style="background-color:rgb(151, 198, 209);">
     <br />
     <br />
     <br />
+    <br>
+    <br>
     <h2>Events</h2>
     <hr class="my-4" />
     <div class="card-columns" id="eventArea">
-      <div class="card eventCard" style="max-width: 18rem;" id="id1">
-        <img src="dogparksall.jpg" class="card-img-top" alt="..." />
-        <div class="card-body">
-          <h5 class="card-title">BowWowWowathon</h5>
-          <h6>05/30/19</h6>
-          <h6>04:30p</h6>
-          <h6>Dog Party</h6>
-          <h6>DogDadSupreme</h6>
-          <h6>PetLoover@Example.com</h6>
-          <h6>PercyWarnerDogPark</h6>
-          <a href="" class="card-link">https://www.bringfido.com/attraction/3740?map=on</a>
-          <br />
-          <br />
-          <div class="card-footer">
-            <div class="btn-group btn-group-sm" role="group">
-              <button type="button" class="btn btn-success going">Going</button>
-              <button type="button" class="btn btn-danger notGoing">Not Going</button>
-              <button type="button" class="btn btn-info updateBtn" data-toggle="modal" data-target="#eventUpdate"
-                role="button" id="updatebtn">Update</button>
-            </div>
-          </div>
-        </div>
+      <div class="card eventCard" id="id">
+        <h5 class="card-title">BowWowWowathon</h5>
+        <h6>05/30/19</h6>
+        <h6>04:30p</h6>
+        <h6>Dog Party</h6>
+        <h6>DogDadSupreme</h6>
+        <h6>PetLoover@Example.com</h6>
+        <h6>PercyWarnerDogPark</h6>
+        <a href="" class="card-link">https://www.bringfido.com/attraction/3740?map=on</a>
+        <br />
+        <hr />
+        <button type="button" class="btn btn-success btn-sm going">Go</button>
+        <button type="button" class="btn btn-danger btn-sm notGoing">
+          No
+        </button>
+        <button type="button" class="btn btn-warning btn-sm updateBtn" data-toggle="modal" data-target="#eventUpdate"
+          role="button" id="updatebtn">
+          Update
+        </button>
+        <hr />
       </div>
-      <div class="card eventCard" style="max-width: 18rem;" id="id">
-        <img src="reptileParty.jpg" class="card-img-top" alt="..." />
-        <div class="card-body">
-          <h5 class="card-title">Lizard Lounge</h5>
-          <h6>07/05/73</h6>
-          <h6>06:30pm</h6>
-          <h6>Reptile Party</h6>
-          <h6>Slytherin Hall</h6>
-          <h6>Salazar Slytherin</h6>
-          <h6>nomugglesallowed@hogwarts.com</h6>
-          <a href="#"
-            class="card-link">https://www.google.com/maps/place/Slitherin+Reptiles/@52.7267142,-1.3758297,17z/data=!3m1!4b1!4m5!3m4!1s0x4879e2d4802af291:0x7721094169a9d9a!8m2!3d52.726711!4d-1.373641</a>
-          <br />
-          <br />
-          <div class="card-footer">
-            <div class="btn-group btn-group-sm" role="group">
-              <button type="button" class="btn btn-success going">Going</button>
-              <button type="button" class="btn btn-danger notGoing">Not Going</button>
-              <button type="button" class="btn btn-info updateBtn" data-toggle="modal" data-target="#eventUpdate"
-                role="button" id="updatebtn">Update</button>
-            </div>
-          </div>
-        </div>
+      <div class="card eventCard" id="id">
+        <h5 class="card-title">Lizard Lounge</h5>
+        <h6>07/05/73</h6>
+        <h6>06:30pm</h6>
+        <h6>Reptile Party</h6>
+        <h6>Slytherin Hall</h6>
+        <h6>Salazar Slytherin</h6>
+        <h6>nomugglesallowed@hogwarts.com</h6>
+        <a href="#"
+          class="card-link">https://www.google.com/maps/place/Slitherin+Reptiles/@52.7267142,-1.3758297,17z/data=!3m1!4b1!4m5!3m4!1s0x4879e2d4802af291:0x7721094169a9d9a!8m2!3d52.726711!4d-1.373641</a>
+        <br />
+        <hr />
+        <button type="button" class="btn btn-success btn-sm going">Go</button>
+        <button type="button" class="btn btn-danger btn-sm notGoing">
+          No
+        </button>
+        <button type="button" class="btn btn-warning btn-sm updateBtn" data-toggle="modal" data-target="#eventUpdate"
+          role="button" id="updatebtn">
+          Update
+        </button>
+        <hr />
       </div>
-      <div class="card eventCard" style="max-width: 18rem;" id="id">
-        <img src="catparty1.jpg" class="card-img-top" alt="..." />
-        <div class="card-body">
-          <h5 class="card-title">Grumpy Cat's Bday Bash</h5>
-          <h6>06/04/2019</h6>
-          <h6>09:00a</h6>
-          <h6>Cat Party</h6>
-          <h6>MusicCityCats</h6>
-          <a href="#" class="card-link">https://musiccitycats.com/</a>
-          <br />
-          <br />
-          <div class="card-footer">
-            <div class="btn-group btn-group-sm" role="group">
-              <button type="button" class="btn btn-success going">Going</button>
-              <button type="button" class="btn btn-danger notGoing">Not Going</button>
-              <button type="button" class="btn btn-info updateBtn" data-toggle="modal" data-target="#eventUpdate"
-                role="button" id="updatebtn">Update</button>
-            </div>
-          </div>
-        </div>
+      <div class="card eventCard" id="id">
+        <h5 class="card-title">Grumpy Cat's Bday Bash</h5>
+        <h6>06/04/2019</h6>
+        <h6>09:00a</h6>
+        <h6>Cat Party</h6>
+        <h6>MusicCityCats</h6>
+        <a href="#" class="card-link">https://musiccitycats.com/</a>
+        <br />
+        <hr />
+        <button type="button" class="btn btn-success btn-sm going">Go</button>
+        <button type="button" class="btn btn-danger btn-sm notGoing">
+          No
+        </button>
+        <button type="button" class="btn btn-warning btn-sm updateBtn" data-toggle="modal" data-target="#eventUpdate"
+          role="button" id="updatebtn">
+          Update
+        </button>
+        <hr />
       </div>
     </div>
     <br />
@@ -439,9 +445,8 @@
 
       <div class="form-group">
         <label for="validationInput">Password</label>
-        <input type="password" class="form-control is-invalid" id="uPassword" required>
+        <input type="password" class="form-control is-invalid" id="uPassword" required />
       </div>
-      
 
       <!-- <div class="form-group">
         <label for="validationInput">Add a Photo link</label>
@@ -458,9 +463,11 @@
         <input type="text" class="form-control is-invalid user" id="uPets" placeholder="PetName1, PetName2, Petname3"
           required></input>
       </div>
-      <p>*keep your username and email address available to sign in.</p>
+      <p>*keep your username and email address available to sign in.</p> -->
       <br />
-      <button type="submit" class="btn btn-primary" id="addUser">Add Me</button>
+      <button type="submit" class="btn btn-primary" id="addUser">
+        Add Me
+      </button>
       <br />
     </form>
     <br />
@@ -518,7 +525,9 @@
           required />
       </div>
       <br />
-      <button type="submit" class="btn btn-primary" id="addEvent">Create Event</button>
+      <button type="submit" class="btn btn-primary" id="addEvent">
+        Create Event
+      </button>
       <br />
       <br />
     </form>
@@ -534,7 +543,6 @@
 
   <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~NEW EVENT HTML~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-
   <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ HEADER/STYLE/NAVBAR/LOGO BANNER/FOOTER MUST BE ON EACH HTML~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
   <!-- Footer -->
   <footer>
@@ -544,15 +552,14 @@
           class="fas fa-paw"></i></a>
       <a href="https://calendar.google.com/calendar/r?pli=1" target="_blank" class="text"><i
           class="far fa-calendar-alt"></i></a>
-      <a href="https://weather.com/weather/tenday/l/Nashville+TN+USTN0357:1:US" target="_blank" class="text"> <i
-          class="fas fa-cloud-rain"></i></a>
-      <a href="https://www.google.com/maps/" target="_blank" class="text"> <i class="fas fa-map-marker-alt"></i></a>
+      <a href="https://weather.com/weather/tenday/l/Nashville+TN+USTN0357:1:US" target="_blank" class="text">
+        <i class="fas fa-cloud-rain"></i></a>
+      <a href="https://www.google.com/maps/" target="_blank" class="text">
+        <i class="fas fa-map-marker-alt"></i></a>
       <a href="https://www.catster.com/" target="_blank" class="text"><i class="fas fa-cat"></i></a>
       <a href="" class="text"></a>
-
     </nav>
   </footer>
-
 </body>
 
 </html>
