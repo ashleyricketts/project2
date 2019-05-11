@@ -1,37 +1,37 @@
-$(document).ready(function() {
+$(document).ready(function () {
   //this triggers the sign in modal
-  $("#submit").on("click", function() {
+  $("#submit").on("click", function () {
     $("#myModal").on("shown.bs.modal");
   });
   // this triggers the profile modal
-  $("#profile").on("click", function() {
+  $("#profile").on("click", function () {
     $("#profileModal").on("shown.bs.modal");
   });
   // this triggers the update/delete event modal
-  $(".updateBtn").on("click", function() {
+  $(".updateBtn").on("click", function () {
     $("#eventUpdate").on("shown.bs.modal");
   });
   // this triggers userUpdate modal
-  $("#updateUser").on("click", function() {
+  $("#updateUser").on("click", function () {
     $("#profileUpdate").on("shown.bs.modal");
   });
 
   //this move events cards from events div to myEvents div
-  $(".going").on("click", function() {
-    $(this).hide(this);
-    $(".notGoing").on("click", function() {
-      $(".going").show(this);
-    });
+
+  $(".going").on("click", function () {
+    $("#id1").prependTo($("#myEvent"));
   });
   //this moves events from myEvents to Events
-  // $(".notGoing").on("click", function() {
-  //   $(".going").show();
-  // });
+  $(".notGoing").on("click", function () {
+    //this needs to move event cards from events div to Events div
+    $("#id1").prependTo($("#eventArea"));
+  });
+
 
   //NEEDS EDIT (formatting on page)
   //loads eventData to eventCards @ #eventArea onload
   //function postEvents() {
-  $.get("/api/events", function(events) {
+  $.get("/api/events", function (events) {
     if (events.length !== 0) {
       for (var i = 0; i < events.length; i++) {
         //creates eventCard for each event from eventsTable
@@ -99,7 +99,7 @@ $(document).ready(function() {
   }
 
   //this collects eventData on click **WORKS!
-  $("#addEvent").on("click", function(event) {
+  $("#addEvent").on("click", function (event) {
     event.preventDefault();
     //eventData
     var eventData = {
@@ -117,40 +117,44 @@ $(document).ready(function() {
   });
 
   //this updates userData
-  $("#updateUser").on("click", function(userData) {
+  $("#updateUser").on("click", function (userData) {
     $.ajax({
       method: "PUT",
       url: "/api/users",
       data: userData
-    }).then(function() {
+    }).then(function () {
       location.reload();
     });
   });
 
   //this updates eventData
-  $("#updateEvent").on("click", function(eventData) {
+  $("#updateEvent").on("click", function (eventData) {
     $.ajax({
       method: "PUT",
       url: "/api/events",
       data: eventData
-    }).then(function() {
+    }).then(function () {
       location.reload();
     });
   });
 
-  //this deletes eventData **needs button?
-  $("#deleteEvent").on("click", function(id) {
+
+  //this deletes eventData **needs button? 
+  $("#deleteEvent").on("click", function (id) {
+
     $.ajax({
       method: "DELETE",
       url: "/api/events/" + id
-    }).then(function() {
+    }).then(function () {
       location.reload();
     });
   });
 
   //for sign in **connected with HTML
   // When the form is submitted, we validate there's an email and password entered
-  $("form.login").on("submit", function(event) {
+
+  $("form.login").on("submit", function (event) {
+
     event.preventDefault();
     var emailInput = $("input#inlineFormInputGroup");
     var passwordInput = $("input#inlineFormInput");
@@ -158,6 +162,7 @@ $(document).ready(function() {
       email: emailInput.val().trim(),
       password: passwordInput.val().trim()
     };
+
 
     if (!userData.email || !userData.password) {
       return;
@@ -173,19 +178,19 @@ $(document).ready(function() {
     $.post("/api/login", {
       email: email,
       password: password
-    })
-      .then(function(data) {
-        window.location.replace(data);
-        // If there's an error, log the error
-      })
-      .catch(function(err) {
-        console.log(err);
-      });
+
+    }).then(function (data) {
+      window.location.replace('/');
+      // If there's an error, log the error
+    }).catch(function (err) {
+      console.log(err);
+    });
+
   }
 
   //create user **connected with HTML
   // When the new member button is clicked, we validate the email and password are not blank
-  $("form.signup").on("submit", function(event) {
+  $("form.signup").on("submit", function (event) {
     event.preventDefault();
     var emailInput = $("input#uEmail");
     var passwordInput = $("input#uPassword");
@@ -210,17 +215,16 @@ $(document).ready(function() {
     $.post("/api/signup", {
       email: email,
       password: password
-    })
-      .then(function(data) {
-        window.location.replace(data);
-        // If there's an error, handle it by throwing up a boostrap alert
-      })
-      .catch(handleLoginErr);
+
+    }).then(function (data) {
+      window.location.replace('/');
+      // If there's an error, handle it by throwing up a boostrap alert
+    }).catch(handleLoginErr);
+
   }
 
   function handleLoginErr(err) {
-    $("#alert .msg").text(err.responseJSON);
-    $("#alert").fadeIn(500);
+    alert(err.responseText);
   }
 
   // onClick #signIn validates email then populates profileData & myEvents
