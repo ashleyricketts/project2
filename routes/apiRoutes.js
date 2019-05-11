@@ -6,7 +6,7 @@ module.exports = function (app) {
   // get all the events **this route works! 
   app.get("/api/events", function (req, res) {
     db.Events.findAll({
-      include: [db.Users]
+      include: [db.newUser]
     }).then(function (events) {
       res.json(events);
     });
@@ -80,9 +80,13 @@ module.exports = function (app) {
     console.log(req.body);
     db.newUser.create({
       email: req.body.email,
-      password: req.body.password
+      password: req.body.password,
+      pet_types: req.body.pet_types,
+      pet_names: req.body.pet_names
+
     }).then(function () {
-      res.redirect(307, "/api/login");
+      res.end();
+      //res.redirect(307, "/api/login");
     }).catch(function (err) {
       console.log(err);
       // res.json(err);

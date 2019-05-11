@@ -49,18 +49,18 @@ $(document).ready(function () {
         eventCard.append("<hr class='my-4'>");
         eventCard.append(
           "<button type='button' class='btn btn-success btn-sm going'>" +
-            "GO" +
-            "</button>"
+          "GO" +
+          "</button>"
         );
         eventCard.append(
           "<button type='button' class='btn btn-danger btn-sm notGoing'>" +
-            "NO" +
-            "</button>"
+          "NO" +
+          "</button>"
         );
         eventCard.append(
           "<button class='btn btn-warning btn-sm updateBtn'data-toggle='modal'data-target='#eventUpdate'role='button'id='updatebtn'>" +
-            "Update" +
-            "</button>"
+          "Update" +
+          "</button>"
         );
         eventCard.append("<hr class='my-4'>");
         //adds events to div
@@ -92,7 +92,7 @@ $(document).ready(function () {
   //   });
   // });
   function getEvents() {
-    $.get("/api/events", function(data) {
+    $.get("/api/events", function (data) {
       events = data;
     });
     location.reload();
@@ -109,7 +109,8 @@ $(document).ready(function () {
       address: $("#eAdd").val(),
       link: $("#eLink").val(),
       pet_types: $("#partyType").val(),
-      host_name: $("#hName").val()
+      host_name: $("#hName").val(),
+      newUserID: 1
     };
     //sending eventData to eventTables
     $.post("/events", eventData, getEvents);
@@ -156,8 +157,8 @@ $(document).ready(function () {
   $("form.login").on("submit", function (event) {
 
     event.preventDefault();
-    var emailInput = $("input#inlineFormInputGroup");
-    var passwordInput = $("input#inlineFormInput");
+    var emailInput = $("input#uEmail");
+    var passwordInput = $("input#uPassword");
     var userData = {
       email: emailInput.val().trim(),
       password: passwordInput.val().trim()
@@ -194,9 +195,14 @@ $(document).ready(function () {
     event.preventDefault();
     var emailInput = $("input#uEmail");
     var passwordInput = $("input#uPassword");
+    var petInput = $("input#petType");
+    var petNameInput = $("input#uPets");
     var userData = {
       email: emailInput.val().trim(),
-      password: passwordInput.val().trim()
+      password: passwordInput.val().trim(),
+      pet_types: petInput.val().trim(),
+      pet_names: petNameInput.val().trim()
+
     };
 
     if (!userData.email || !userData.password) {
@@ -204,18 +210,21 @@ $(document).ready(function () {
     }
     console.log(userData);
     // If we have an email and password, run the signUpUser function
-    signUpUser(userData.email, userData.password);
+    signUpUser(userData.email, userData.password, userData.pet_types, userData.pet_names);
     emailInput.val("");
     passwordInput.val("");
+    petInput.val("");
+    petNameInput.val("")
   });
 
   // Does a post to the signup route. If succesful, we are redirected to the members page
   // Otherwise we log any errors
-  function signUpUser(email, password) {
+  function signUpUser(email, password, pet_types, pet_names) {
     $.post("/api/signup", {
       email: email,
-      password: password
-
+      password: password,
+      pet_types: pet_types,
+      pet_names: pet_names
     }).then(function (data) {
       window.location.replace('/');
       // If there's an error, handle it by throwing up a boostrap alert
