@@ -10,29 +10,6 @@ module.exports = function(app) {
 
   // index route loads view.html
   app.get("/", function(req, res) {
-    //If the user already has an account send them to the memebers page
-    if(req.newUser) {
-      res.redirect("/members");
-    }
-    res.sendFile(path.join(__dirname, "../public/assets/index.html"));
-  });
-
-  app.get("/login", function(req, res) {
-    //If the doesn't have an account send them to the login page
-
-    if (req.newUser) {
-      res.redirect("/members");
-    }
-
-    res.sendFile(path.join(__dirname, "../public/assets/index.html"));
-  });
-
-  //If a user who is not logged in tries to access this route they will be redirected
-  app.get("/members", isAuthenticated, function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/assets/index.html"));
-  })
-
-  app.get("/users", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/assets/index.html"));
   });
 };
