@@ -91,6 +91,15 @@ $(document).ready(function () {
   //     location.reload();
   //   });
   // });
+
+
+  //get the id of someone who is posting an event before the ajax call to post is made. 
+  //grab their email when they login 
+  var currentUserId;
+  
+
+
+  
   function getEvents() {
     $.get("/api/events", function (data) {
       events = data;
@@ -110,11 +119,12 @@ $(document).ready(function () {
       link: $("#eLink").val(),
       pet_types: $("#partyType").val(),
       host_name: $("#hName").val(),
-      newUserID: 1
-    };
+      newUserId: 1
+    }
     //sending eventData to eventTables
     $.post("/events", eventData, getEvents);
     console.log(eventData);
+    location.replace("/");
   });
 
   //this updates userData
@@ -141,11 +151,11 @@ $(document).ready(function () {
 
 
   //this deletes eventData **needs button? 
-  $("#deleteEvent").on("click", function (id) {
+  $("#deleteEvent").on("click", function () {
 
     $.ajax({
       method: "DELETE",
-      url: "/api/events/" + id
+      url: "/api/events/1"
     }).then(function () {
       location.reload();
     });
@@ -159,6 +169,17 @@ $(document).ready(function () {
     event.preventDefault();
     var emailInput = $("input#uEmail");
     var passwordInput = $("input#uPassword");
+    currentUserEmail = emailInput;
+    console.log(currentUserEmail);
+
+    // function to get new user id
+
+      $.get("/api/users/" + currentUserEmail, function (data) {
+        console.log(data);
+        currentUserId = data.id;
+        console.log(newUserId);
+      });
+
     var userData = {
       email: emailInput.val().trim(),
       password: passwordInput.val().trim()
@@ -172,6 +193,7 @@ $(document).ready(function () {
     loginUser(userData.email, userData.password);
     emailInput.val("");
     passwordInput.val("");
+    
   });
 
   // loginUser does a post to our "api/login" route and if successful, redirects us the the members page
@@ -181,6 +203,7 @@ $(document).ready(function () {
       password: password
 
     }).then(function (data) {
+      //currentUserEmail = email;
       window.location.replace('/');
       // If there's an error, log the error
     }).catch(function (err) {
@@ -191,12 +214,12 @@ $(document).ready(function () {
 
   //create user **connected with HTML
   // When the new member button is clicked, we validate the email and password are not blank
-  $("form.signup").on("submit", function (event) {
+  $("#signup").on("submit", function (event) {
     event.preventDefault();
-    var emailInput = $("input#uEmail");
-    var passwordInput = $("input#uPassword");
-    var petInput = $("input#petType");
-    var petNameInput = $("input#uPets");
+    var emailInput = $("#email");
+    var passwordInput = $("#password");
+    var petInput = $("#petType");
+    var petNameInput = $("#userPet");
     var userData = {
       email: emailInput.val().trim(),
       password: passwordInput.val().trim(),
@@ -228,6 +251,14 @@ $(document).ready(function () {
     }).then(function (data) {
       window.location.replace('/');
       // If there's an error, handle it by throwing up a boostrap alert
+
+      //hide or empty the add member button and the new member form after creating a member
+
+      $("button#newMembers").hide();
+
+
+
+
     }).catch(handleLoginErr);
 
   }
@@ -263,4 +294,9 @@ $(document).ready(function () {
   //     });
   //   }
   // });
+
+  //console.log(currentUserEmail);
+
+
+
 });
