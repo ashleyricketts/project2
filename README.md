@@ -39,3 +39,7 @@ Google Maps Link
 ### \_Heroku Deployment Link
 
 <https://petpartyaba.herokuapp.com/>
+
+### _typical UI - demo videos_
+
+<https://drive.google.com/file/d/181kXoecZJK45GmNiR62ljnEIL7aCDBym/view>
