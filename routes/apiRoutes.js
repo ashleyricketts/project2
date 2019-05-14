@@ -15,16 +15,21 @@ module.exports = function (app) {
 
 
   //might not be useful, better to list events in order to keep login simple ?
-  // Get all users, include join
-  // app.get("/api/users", function(req, res) {
-  //   db.newUsers.findAll({
-  //     // include: [db.Events]
-  //   }).then(function(newUsers) {
-  //     res.json(newUsers);
-  //   });
-  // });
+  //Get all users, include join
+  app.get("/api/users", function(req, res) {
+    db.newUser.findAll({
+       include: [db.Events]
+    }).then(function(newUsers) {
+      res.json(newUsers);
+    });
+  });
 
-
+  // api call to get the id of the logged in user. 
+app.get("/api/users/:email", function(req, res){
+  db.newUser.findOne({where: {email: req.params.email}, include: [db.Events]}).then(function(selectedUser){
+    res.json(selectedUser);
+  });
+});
 
 
   // Create a new user **using login instead
@@ -45,7 +50,8 @@ module.exports = function (app) {
       link: req.body.link,
       address: req.body.address,
       pet_types: req.body.pet_types,
-      host_name: req.body.host_name
+      host_name: req.body.host_name,
+      newUserId: req.body.newUserId
     }).then(function (dbEvents) {
       res.json(dbEvents);
     });
@@ -55,11 +61,11 @@ module.exports = function (app) {
 
   //not working, is it needed? 
   // // Delete an example by id 
-  // app.delete("/api/users/:id", function(req, res) {
-  //   db.Users.destroy({ where: { id: req.params.id } }).then(function(users) {
-  //     res.json(users);
-  //   });
-  // });
+  app.delete("/api/users/:id", function(req, res) {
+    db.Users.destroy({ where: { id: req.params.id } }).then(function(users) {
+      res.json(users);
+    });
+  });
 
 
   //Need to work on this part below with routing login... (ashley)
