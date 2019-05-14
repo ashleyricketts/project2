@@ -96,6 +96,8 @@ $(document).ready(function () {
   //get the id of someone who is posting an event before the ajax call to post is made. 
   //grab their email when they login 
   var currentUserId;
+
+      
   
 
 
@@ -119,7 +121,7 @@ $(document).ready(function () {
       link: $("#eLink").val(),
       pet_types: $("#partyType").val(),
       host_name: $("#hName").val(),
-      newUserId: 1
+      newUserId: currentUserId
     }
     //sending eventData to eventTables
     $.post("/events", eventData, getEvents);
@@ -169,16 +171,8 @@ $(document).ready(function () {
     event.preventDefault();
     var emailInput = $("input#uEmail");
     var passwordInput = $("input#uPassword");
-    currentUserEmail = emailInput;
-    console.log(currentUserEmail);
-
-    // function to get new user id
-
-      $.get("/api/users/" + currentUserEmail, function (data) {
-        console.log(data);
-        currentUserId = data.id;
-        console.log(newUserId);
-      });
+    //currentUserEmail = emailInput;
+    //console.log(currentUserEmail);
 
     var userData = {
       email: emailInput.val().trim(),
@@ -198,13 +192,25 @@ $(document).ready(function () {
 
   // loginUser does a post to our "api/login" route and if successful, redirects us the the members page
   function loginUser(email, password) {
+
     $.post("/api/login", {
       email: email,
       password: password
 
     }).then(function (data) {
-      //currentUserEmail = email;
-      window.location.replace('/');
+      currentUserEmail = email; 
+      console.log(currentUserEmail);
+    // get the logged in user id first so we can use it to post events related to that user. 
+    $.get("/api/users/" + currentUserEmail, function (data) {
+      var users = data;
+      console.log(users);
+      currentUserId = users.id;
+      console.log(currentUserId);
+    });
+    //empty the model body and create a new <p> to close the model. 
+    $(".modal-body").empty();
+    $(".modal-body").text("Login successfull! Close this model and continue with adding or browsing for available events!")  
+    //window.location.replace('/');
       // If there's an error, log the error
     }).catch(function (err) {
       console.log(err);
