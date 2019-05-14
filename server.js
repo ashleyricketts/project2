@@ -41,7 +41,7 @@ var syncOptions = { force: true };
 //}
 
 // Starting the server, syncing our models ------------------------------------/
-db.sequelize.sync({ force: true }).then(function() {
+db.sequelize.sync({ force: false }).then(function() {
   app.listen(PORT, function() {
     console.log(
       "==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.",
